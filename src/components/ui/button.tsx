@@ -3,6 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import {ChevronRight, Mail} from "lucide-react";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap active:translate-y-px rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -53,5 +54,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 Button.displayName = "Button";
+
+export function ButtonWithIcon() {
+  return (
+    <Button>
+      <Mail className="mr-2 h-4 w-4" /> Login with Email
+    </Button>
+  )
+}
 
 export { Button, buttonVariants };
