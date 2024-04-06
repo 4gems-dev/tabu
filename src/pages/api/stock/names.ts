@@ -7,10 +7,10 @@ import { ApiEndpointType } from "@/types/api";
 
 interface StockData {
     symbol: string;
-    currentPrice: number;
+    name: string;
 }
 
-export type ApiStockPricesGET = ApiEndpointType<
+export type ApiStockNamesGET = ApiEndpointType<
     "GET", null,
     SuccessType<{
         data: StockData[]
@@ -20,8 +20,8 @@ export type ApiStockPricesGET = ApiEndpointType<
 >;
 
 export default async function handler(
-    req: ApiStockPricesGET["request"],
-    res: NextApiResponse<ApiStockPricesGET["response"]>
+    req: ApiStockNamesGET["request"],
+    res: NextApiResponse<ApiStockNamesGET["response"]>
 ) {
     switch (req.method) {
         case "GET":
@@ -34,36 +34,33 @@ export default async function handler(
 }
 
 async function GET(
-    req: ApiStockPricesGET["request"],
-    res: NextApiResponse<ApiStockPricesGET["response"]>
+    req: ApiStockNamesGET["request"],
+    res: NextApiResponse<ApiStockNamesGET["response"]>
 ) {
     const symbols = InterestsEnumArray.flatMap(interest => stockNames(interest));
     const token = 'co8l9qhr01qjn9a1tfbgco8l9qhr01qjn9a1tfc0';
-
-    const promises = symbols.filter(symbol => !cacheProviderHas(symbol)).map(async symbol => {
-        const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${token}`;
-        const data = await fetch(url).then(response => response.json());
-        return [symbol, data];
+    const promises = symbols.filter(symbol => !cacheProviderHas(symbol + "-NAMES")).map(symbol => {
+        const url = `https://finnhub.io/api/v1/search?q=${symbol}&token=${token}`;
+        return fetch(url).then(response => response.json()).catch(error => console.error('Error:', error));
     });
 
     let data = await Promise.all(promises);
 
-
-    const cachedData = symbols.filter(symbol => cacheProviderHas(symbol)).map(symbol => cacheProviderGet(symbol));
+    const cachedData = symbols.filter(symbol => cacheProviderHas(symbol + "-NAMES")).map(symbol => cacheProviderGet(symbol + "-NAMES"));
 
     data = data.concat(cachedData);
 
     const toReturn = data.map((item: any, index: number) => {
-        if (!item || item[1].error) {
+        if (!item || item.error || item.result[0].error) {
             return ({
-                symbol: 'Error fetching data',
-                currentPrice: 'Error fetching data',
+                symbol: "Error fetching data",
+                name: 'Error fetching data',
             })
         }
-        cacheProvider(item[0], item, Date.now() + 1000 * 60 * 60 * 24);
+        cacheProvider(item.result[0].symbol + "-NAMES", item, Date.now() + 1000 * 60 * 60 * 24);
         return ({
-            symbol: item[0],
-            currentPrice: item[1].c,
+            symbol: item.result[0].symbol,
+            name: item.result[0].description,
         })
     });
 
