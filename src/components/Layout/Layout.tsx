@@ -63,12 +63,10 @@ export default function Layout({
       </main>
 
       <footer
-        className={`${
-          classNames?.header ?? ""
-        } mt-auto border-t border-gray-100 text-white `}
+        className={`${classNames?.header ?? ""} mt-auto border-t text-white `}
       >
         <Container className="">
-          <p className="text-center text-sm text-gray-600 font-semibold">
+          <p className="text-center text-sm font-semibold">
             Copyright © 2024 TABU. All Rights Reserved
           </p>
         </Container>
