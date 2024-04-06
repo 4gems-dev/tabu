@@ -71,7 +71,7 @@ export default function Layout({
       >
         <Container className="">
           <p className="text-center text-sm text-gray-600 font-semibold">
-          2024
+            Copyright © 2024 TABU. All Rights Reserved
           </p>
         </Container>
       </footer>

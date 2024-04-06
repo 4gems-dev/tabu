@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Container from "@/components/ui/container";
 import Layout from "@/components/Layout/Layout";
 import {Button} from "@/components/ui/button";
+import {TextGenerateEffect} from "@/components/ui/text-generate-effect";
 
 export default function LandingPage() {
   const [statistics, setStatistics] = useState({
@@ -12,6 +13,13 @@ export default function LandingPage() {
   // annimations
   const [statistic1, setStatistic1] = useState(0);
   const [statistic2, setStatistic2] = useState(0);
+
+  // timeouts for text
+  const [showFirst, setShowFirst] = useState(false);
+  const [showSecond, setShowSecond] = useState(false);
+  const [showThird, setShowThird] = useState(false);
+
+  // counters for column data
   const usersCount = statistics.usersCount;
   const stocksCount = statistics.stocksCount;
 
@@ -25,12 +33,31 @@ export default function LandingPage() {
       setStatistic2((prev) => (prev < stocksCount ? prev + 1 : prev));
     }, 100);
 
-
     return () => {
       clearInterval(interval1);
       clearInterval(interval2);
     };
   }, [usersCount, stocksCount]);
+
+  useEffect(() => {
+    const timeoutFirst = setTimeout(() => {
+      setShowFirst(true);
+    }, 0);
+
+    const timeoutSecond = setTimeout(() => {
+      setShowSecond(true);
+    }, 1000);
+
+    const timeoutThird = setTimeout(() => {
+      setShowThird(true);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeoutFirst);
+      clearTimeout(timeoutSecond);
+      clearTimeout(timeoutThird);
+    };
+  }, []);
 
   return (
     <Layout title="Landing Page" className="grow">
@@ -38,16 +65,30 @@ export default function LandingPage() {
         <div className="max-w-8xl mx-auto flex flex-col lg:flex-row items-center">
 
           {/* Left side */}
-          <div className="w-full mt-8 lg:w-1/2 pr-8">
-            <h1 className="text-4xl font-bold mb-4"><span className="text-6xl">TABU</span> makes investments not a
-              taboo. </h1>
-            <p className="text-lg md:text-xl lg:text-2xl xl:text-lg">
-              Step into the finance and investing world without taking real risks.
-              <br className="hidden sm:inline"/> Learn how to invest and make money with TABU.
-            </p>
+          <div className="w-full lg:w-1/2 pr-8">
+            <div className="sm:h-52 md:h-64">
+              {showFirst && (
+                <TextGenerateEffect
+                  words={"TABU makes investments not a taboo."}
+                  className={"text-5xl font-bold mb-4"}
+                />
+              )}
+              {showSecond && (
+                <TextGenerateEffect
+                  words={"Step into the finance and investing world without taking real risks."}
+                  className={"text-3xl xl:text-xl lg:text-3xl"}
+                />
+              )}
+              {showThird && (
+                <TextGenerateEffect words={"Learn how to invest and make money with TABU."}/>
+              )}
+            </div>
 
             <div className="flex justify-center mt-4 gap-2 flex-wrap">
-              <Button>Enter</Button>
+              <button
+                className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] mt-12 px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
+                Enter now
+              </button>
             </div>
           </div>
 
@@ -67,7 +108,7 @@ export default function LandingPage() {
 
         {/* New block with two columns */}
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="text-center">
+        <div className="text-center">
             <div className="text-4xl font-bold">Users</div>
             <div
               className={`text-4xl mb-2 ${statistic1 < usersCount ? "animate-pulse" : ""
