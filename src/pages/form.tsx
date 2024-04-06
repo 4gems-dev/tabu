@@ -9,6 +9,7 @@ import { PreferencesType, usePreferencesState } from "@/state/preferencesState";
 import { InterestsEnum, IntervalEnum, RiskToleranceEnum } from "@/types";
 import { useScroll, useTransform } from "framer-motion";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { useRouter } from "next/router";
 import { PropsWithChildren, useRef, useState } from "react";
 
 export type PreferencesFormStepsType = keyof PreferencesType;
@@ -76,15 +77,19 @@ export default function FormPage() {
     setValue,
   } = usePreferencesState();
 
+  const { push } = useRouter();
+
   const handleContinue = () => {
     const currIndex = stepOrder.findIndex((_step) => _step === step);
 
     if (currIndex >= stepOrder.length - 1) {
+      push("/loading");
       return;
     }
 
     const nextStep = stepOrder[currIndex + 1];
     setStep(nextStep);
+    window.scrollTo({ top: 0 });
   };
 
   const handleBack = () => {
@@ -96,6 +101,7 @@ export default function FormPage() {
 
     const prevStep = stepOrder[currIndex - 1];
     setStep(prevStep);
+    window.scrollTo({ top: 0 });
   };
 
   return (

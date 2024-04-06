@@ -73,23 +73,21 @@ export default function LandingPage() {
               )}
               {showSecond && (
                 <TextGenerateEffect
-                  words={
-                    "Step into the finance and investing world without taking real risks."
-                  }
+                  words={"Learn how to invest and make money with TABU."}
                   className={"text-3xl xl:text-xl lg:text-3xl"}
                 />
               )}
-              {showThird && (
+              {/* {showThird && (
                 <TextGenerateEffect
                   words={"Learn how to invest and make money with TABU."}
                 />
-              )}
+              )} */}
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8">
               <Link
                 href="/form"
-                className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] mt-12 px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear"
+                className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] mt-12 px-10 py-4 bg-[#0070f3] rounded-md text-white transition duration-200 ease-linear text-2xl font-semibold"
               >
                 Enter now
               </Link>
