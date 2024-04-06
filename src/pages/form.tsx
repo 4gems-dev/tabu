@@ -4,20 +4,15 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Slider } from "@/components/ui/slider";
 import { objectKeys } from "@/lib";
+import { PreferencesType, usePreferencesState } from "@/state/preferencesState";
 import { InterestsEnum, IntervalEnum, RiskToleranceEnum } from "@/types";
 import { useScroll, useTransform } from "framer-motion";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 import { PropsWithChildren, useRef, useState } from "react";
 
-type UserProfileType = {
-  name: string;
-  interests: InterestsEnum[];
-  riskTolerance: RiskToleranceEnum;
-  budget: number | null;
-  years: IntervalEnum;
-};
+export type PreferencesFormStepsType = keyof PreferencesType;
 
-const stepOrder: (keyof UserProfileType)[] = [
+const stepOrder: PreferencesFormStepsType[] = [
   "name",
   "interests",
   "riskTolerance",
@@ -41,7 +36,7 @@ const intervalConfig: Record<IntervalEnum, string> = {
  * @param step
  * @returns
  */
-function getStepIndex(step: keyof UserProfileType | null) {
+function getStepIndex(step: PreferencesFormStepsType | null) {
   return stepOrder.findIndex((_step) => _step === step);
 }
 
@@ -77,57 +72,19 @@ const interestsData: Record<
 };
 
 export default function FormPage() {
-  const [step, setStep] = useState<keyof UserProfileType | null>(null);
+  const [step, setStep] = useState<PreferencesFormStepsType | null>(null);
 
-  const [values, setValues] = useState<UserProfileType>({
-    name: "",
-    interests: [],
-    riskTolerance: "LOW",
-    budget: null,
-    years: "UNCERTAIN",
-  });
-
-  const [error, setError] = useState("");
-
-  const setValue = <TKey extends keyof UserProfileType>(
-    key: TKey,
-    value: UserProfileType[TKey]
-  ) => {
-    setValues((values) => ({ ...values, [key]: value }));
-  };
-
-  const toggleInterest = (interest: InterestsEnum) => {
-    setValues((values) => {
-      const currentInterests = [...values.interests];
-
-      if (values.interests.includes(interest)) {
-        return {
-          ...values,
-          interests: currentInterests.filter((value) => value !== interest),
-        };
-      }
-      currentInterests.push(interest);
-      return { ...values, interests: currentInterests };
-    });
-  };
-
-  const validateStep = (): boolean => {
-    if (step === "name") {
-      const isValid = values.name.trim().length > 0;
-
-      setError(isValid ? "" : "Fill your name before continuing");
-
-      return isValid;
-    }
-
-    return true;
-  };
+  const {
+    name,
+    budget,
+    interests,
+    riskTolerance,
+    years,
+    toggleInterest,
+    setValue,
+  } = usePreferencesState();
 
   const handleContinue = () => {
-    if (!validateStep()) {
-      return;
-    }
-
     const currIndex = stepOrder.findIndex((_step) => _step === step);
 
     if (currIndex >= stepOrder.length - 1) {
@@ -153,8 +110,6 @@ export default function FormPage() {
     const prevStep = stepOrder[currIndex - 1];
     setStep(prevStep);
   };
-
-  const isError = error.length > 0;
 
   return (
     <>
@@ -201,20 +156,17 @@ export default function FormPage() {
                     autoComplete="off"
                     id="name"
                     placeholder="Fill your full name"
-                    className={`${
-                      isError ? "border-destructive" : ""
-                    } text-lg h-auto py-4 px-4 max-w-md`}
+                    className="text-lg h-auto py-4 px-4 max-w-md"
                     onChange={(e) => setValue("name", e.target.value)}
-                    value={values.name}
+                    value={name}
                   />
-                  {isError && <p className="text-destructive mt-1">{error}</p>}
                 </>
               )}
 
               {step === "interests" && (
                 <div className="grid auto-rows-fr gap-6">
                   {objectKeys(interestsData).map((interest, i) => {
-                    const isSelected = values.interests.includes(interest);
+                    const isSelected = interests.includes(interest);
                     return (
                       <button
                         key={i}
@@ -257,7 +209,7 @@ export default function FormPage() {
                       track: "h-10 rounded-lg",
                       thumb: "w-10 h-10 rounded-lg",
                       range: `bg-gradient-to-r from-blue-800 via-purple-800 ${
-                        values.riskTolerance === "MEDIUM"
+                        riskTolerance === "MEDIUM"
                           ? "to-purple-800"
                           : "to-red-800"
                       }`,
@@ -265,7 +217,7 @@ export default function FormPage() {
                     className="rounded-lg"
                     value={[
                       riskToleranceValues.findIndex(
-                        (value) => value === values.riskTolerance
+                        (value) => value === riskTolerance
                       ) * 50,
                     ]}
                     defaultValue={[50]}
@@ -282,7 +234,7 @@ export default function FormPage() {
                   <div className="flex justify-between items-center mt-2 text-lg font-semibold">
                     <Button
                       className={`${
-                        values.riskTolerance === "LOW"
+                        riskTolerance === "LOW"
                           ? "bg-blue-800 hover:bg-blue-800"
                           : ""
                       } h-auto py-3 text-lg `}
@@ -293,7 +245,7 @@ export default function FormPage() {
                     </Button>
                     <Button
                       className={`${
-                        values.riskTolerance === "MEDIUM"
+                        riskTolerance === "MEDIUM"
                           ? "bg-purple-800 hover:bg-purple-800"
                           : ""
                       } h-auto py-3 text-lg`}
@@ -304,7 +256,7 @@ export default function FormPage() {
                     </Button>
                     <Button
                       className={`${
-                        values.riskTolerance === "HIGH"
+                        riskTolerance === "HIGH"
                           ? "bg-red-800 hover:bg-red-800"
                           : ""
                       } h-auto py-3 text-lg`}
@@ -321,14 +273,12 @@ export default function FormPage() {
                 <div className="flex items-center gap-1 relative max-w-xs">
                   <Input
                     placeholder="Fill your budget"
-                    className={`${
-                      isError ? "border-destructive" : ""
-                    } text-lg h-auto py-4 px-4 w-full`}
+                    className="text-lg h-auto py-4 px-4 w-full"
                     onChange={(e) => {
                       const value = Number(e.target.value);
                       setValue("budget", isNaN(value) ? 0 : value);
                     }}
-                    value={values.budget ?? ""}
+                    value={budget ?? ""}
                   />
 
                   <p className="absolute right-3">€</p>
@@ -338,7 +288,7 @@ export default function FormPage() {
               {step === "years" && (
                 <div className="grid auto-rows-fr gap-6">
                   {objectKeys(intervalConfig).map((interval, i) => {
-                    const isSelected = values.years === interval;
+                    const isSelected = years === interval;
                     return (
                       <button
                         key={i}
