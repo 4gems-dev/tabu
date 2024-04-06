@@ -27,7 +27,7 @@ export default function LoadingPage({}: PropsType) {
   }, []);
 
   return (
-    <Layout title="Dashboard" className="grid place-items-center grow">
+    <Layout title="Loading" className="grid place-items-center grow">
       <div className="max-w-2xl ">
         <h1 className="text-6xl font-semibold text-center leading-normal mb-20">
           Please wait, we are creating{" "}

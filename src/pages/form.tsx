@@ -165,8 +165,8 @@ export default function FormPage() {
                         key={i}
                         onClick={() => toggleInterest(interest)}
                         className={`${
-                          isSelected ? "bg-muted/30" : ""
-                        } flex gap-4 p-4 rounded-xl active:translate-y-px items-start justify-start text-left border-solid border hover:bg-muted/30`}
+                          isSelected ? "bg-muted/80" : ""
+                        } flex gap-4 p-4 rounded-xl active:translate-y-px items-start justify-start text-left border-solid border hover:bg-muted/80`}
                       >
                         <div
                           className={`${
@@ -228,7 +228,7 @@ export default function FormPage() {
                     <Button
                       className={`${
                         riskTolerance === "LOW"
-                          ? "bg-blue-800 hover:bg-blue-800"
+                          ? "bg-blue-800 hover:bg-blue-800 hover:text-primary"
                           : ""
                       } h-auto py-3 text-lg `}
                       variant={"ghost"}
@@ -239,7 +239,7 @@ export default function FormPage() {
                     <Button
                       className={`${
                         riskTolerance === "MEDIUM"
-                          ? "bg-purple-800 hover:bg-purple-800"
+                          ? "bg-purple-800 hover:bg-purple-800 hover:text-primary"
                           : ""
                       } h-auto py-3 text-lg`}
                       variant={"ghost"}
@@ -250,7 +250,7 @@ export default function FormPage() {
                     <Button
                       className={`${
                         riskTolerance === "HIGH"
-                          ? "bg-red-800 hover:bg-red-800"
+                          ? "bg-red-800 hover:bg-red-800 hover:text-primary"
                           : ""
                       } h-auto py-3 text-lg`}
                       variant={"ghost"}
@@ -287,8 +287,8 @@ export default function FormPage() {
                         key={i}
                         onClick={() => setValue("years", interval)}
                         className={`${
-                          isSelected ? "bg-muted/30" : ""
-                        } flex gap-4 p-4 rounded-xl active:translate-y-px items-start justify-start text-left border-solid border hover:bg-muted/30`}
+                          isSelected ? "bg-muted/80" : ""
+                        } flex gap-4 p-4 rounded-xl active:translate-y-px items-start justify-start text-left border-solid border hover:bg-muted/80`}
                       >
                         <div className="rounded-full border-primary border h-8 w-8 flex-shrink-0 grid place-items-center">
                           {isSelected && (
