@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout/Layout";
 import Container from "@/components/ui/container";
 import { usePreferencesState } from "@/state/preferencesState";
+import AreaGraph from "@/components/graf/areaGraph";
 
 type PropsType = {};
 
@@ -15,8 +16,12 @@ export default function DashboardPage({}: PropsType) {
 
         <section className="grid-cols-3 grid gap-4 mt-10">
           <div className="col-span-2 p-4 rounded-lg border bg-foreground/5">
-            {/* chart */}
-            <div className="h-[30rem]" />
+            <AreaGraph />
+            <AreaGraph />
+            <AreaGraph />
+            <AreaGraph />
+            <AreaGraph />
+            {/*<div className="h-[30rem]" />*/}
           </div>
 
           <div className="row-span-2 p-4 rounded-lg border bg-foreground/5">
