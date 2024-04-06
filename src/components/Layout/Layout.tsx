@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 import Head from "next/head";
 
 import Link from "next/link";
 
-import React, { PropsWithChildren } from "react";
-
+import { PropsWithChildren } from "react";
 
 type PropsType = PropsWithChildren<{
   title: string;
@@ -28,11 +26,10 @@ export default function Layout({
   className = "",
   classNames,
 }: PropsType) {
-
   return (
     <>
       <Head>
-        <title>{`TITLE`}</title>
+        <title>{title} | Tabu</title>
       </Head>
       <header
         className={cn(
@@ -45,17 +42,17 @@ export default function Layout({
             <img
               src={`/logo-tatra-banka.png`}
               alt="Landing page image"
-              className="w-full h-full object-fil" // Set the width for desktop view
+              className="w-full h-full max-h-16 object-fil" // Set the width for desktop view
             />
           </Link>
 
           <nav className="ml-auto flex items-center gap-1">
             <ul className="sm:flex hidden items-center gap-1 flex-shrink-0">
-              <li>
-              <Button asChild variant="link" className="flex-shrink-0">
+              {/* <li>
+                <Button asChild variant="link" className="flex-shrink-0">
                   <Link href="/example">Example</Link>
                 </Button>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </Container>
@@ -66,8 +63,9 @@ export default function Layout({
       </main>
 
       <footer
-        className={`${classNames?.header ?? ""
-          } mt-auto border-t border-gray-100 text-white `}
+        className={`${
+          classNames?.header ?? ""
+        } mt-auto border-t border-gray-100 text-white `}
       >
         <Container className="">
           <p className="text-center text-sm text-gray-600 font-semibold">

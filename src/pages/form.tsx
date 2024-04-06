@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout/Layout";
 import { Button } from "@/components/ui/button";
 import { GeminiEffect } from "@/components/ui/gemini";
 import { Input } from "@/components/ui/input";
@@ -31,15 +32,6 @@ const intervalConfig: Record<IntervalEnum, string> = {
   "10+": "More than 10 years",
 };
 
-/**
- *
- * @param step
- * @returns
- */
-function getStepIndex(step: PreferencesFormStepsType | null) {
-  return stepOrder.findIndex((_step) => _step === step);
-}
-
 const interestsData: Record<
   InterestsEnum,
   { label: string; description: string }
@@ -72,7 +64,7 @@ const interestsData: Record<
 };
 
 export default function FormPage() {
-  const [step, setStep] = useState<PreferencesFormStepsType | null>(null);
+  const [step, setStep] = useState<PreferencesFormStepsType>("name");
 
   const {
     name,
@@ -98,12 +90,7 @@ export default function FormPage() {
   const handleBack = () => {
     const currIndex = stepOrder.findIndex((_step) => _step === step);
 
-    if (currIndex < 0) {
-      return;
-    }
-
-    if (currIndex === 0) {
-      setStep(null);
+    if (currIndex <= 0) {
       return;
     }
 
@@ -112,7 +99,7 @@ export default function FormPage() {
   };
 
   return (
-    <>
+    <Layout title="Create investment account" className="grow">
       {/* <header className="h-20 border-b"></header> */}
       <Progress
         className="w-full sticky top-0 h-1 rounded-none"
@@ -316,19 +303,24 @@ export default function FormPage() {
           </div>
 
           <aside className="fixed bottom-0 z-10 bg-background border-t left-0 right-0 h-24 flex justify-end px-10 items-center gap-8">
-            {step !== null && (
+            {getStepIndex(step) > 0 && (
               <Button size="sm" variant="ghost" onClick={handleBack}>
                 Back
               </Button>
             )}
-            <Button size="xl" className="gap-2 px-8" onClick={handleContinue}>
+            <Button
+              size="xl"
+              className="gap-2 px-8"
+              onClick={handleContinue}
+              variant="accent"
+            >
               <p>Continue</p>
               <ChevronRightIcon />
             </Button>
           </aside>
         </>
       )}
-    </>
+    </Layout>
   );
 }
 
@@ -381,4 +373,13 @@ function HomeStep({ onClick }: { onClick: () => void }) {
       />
     </div>
   );
+}
+
+/**
+ *
+ * @param step
+ * @returns
+ */
+function getStepIndex(step: PreferencesFormStepsType | null) {
+  return stepOrder.findIndex((_step) => _step === step);
 }
