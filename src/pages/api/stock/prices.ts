@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { cacheProvider, cacheProviderGet, cacheProviderHas } from '@/lib/cache/cacheProvider';
 import { stockNames } from '@/lib/static/stockNames';
 import { InterestsEnumArray, SuccessType } from '@/types';
-import { GetServerSideProps } from 'next';
 import { ApiEndpointType } from "@/types/api";
 
 interface StockData {
@@ -61,7 +60,7 @@ async function GET(
                 currentPrice: 'Error fetching data',
             })
         }
-        cacheProvider(symbol, item, Date.now() + 1000 * 60 * 60);
+        cacheProvider(symbol, item, Date.now() + 1000 * 60 * 60 * 24);
         return ({
             symbol: symbol,
             currentPrice: item.c,
