@@ -23,7 +23,6 @@ export default function DashboardPage({}: PropsType) {
             <AreaGraph />
             <AreaGraph />
             {/*<div className="h-[30rem]" />*/}
-            <LogicStocks/>
           </div>
 
           <div className="row-span-2 p-4 rounded-lg border bg-foreground/5">
@@ -31,8 +30,8 @@ export default function DashboardPage({}: PropsType) {
           </div>
 
           <div className="col-span-2 p-4 rounded-lg border bg-foreground/5">
-            {/* stocks */}
-            <div className="h-[10rem]" />
+            <LogicStocks/>
+            {/*<div className="h-[10rem]" />*/}
           </div>
         </section>
       </Container>
