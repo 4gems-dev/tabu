@@ -53,7 +53,7 @@
     "Impact": "positive",
     "Message": "Strong growth in demand for business travel as companies return to in-person meetings",
     "Percentage": 10,
-    "Day": 215
+    "Day": 21
   },
   {
     "stockName": "Hilton Worldwide Holdings",
@@ -61,7 +61,7 @@
     "Impact": "negative",
     "Message": "Negative publicity surrounding labor disputes with hotel staff hurts brand image and booking rates",
     "Percentage": -7,
-    "Day": 48
+    "Day": 4
   },
   {
     "stockName": "Delta Air Lines",
@@ -69,7 +69,7 @@
     "Impact": "positive",
     "Message": "Airline industry rebounds strongly from pandemic as travel restrictions ease, leading to increased demand for flights",
     "Percentage": 12,
-    "Day": 275
+    "Day": 27
   },
   {
     "stockName": "Delta Air Lines",
@@ -77,7 +77,7 @@
     "Impact": "negative",
     "Message": "Spike in fuel costs due to global geopolitical tensions significantly increases operating expenses",
     "Percentage": -6,
-    "Day": 140
+    "Day": 14
   },
   {
     "stockName": "Southwest Airlines",
@@ -85,7 +85,7 @@
     "Impact": "positive",
     "Message": "Southwest Airlines implements successful cost-cutting measures, boosting profitability",
     "Percentage": 10,
-    "Day": 308
+    "Day": 30
   },
   {
     "stockName": "Southwest Airlines",
@@ -93,7 +93,7 @@
     "Impact": "negative",
     "Message": "Pilot shortage disrupts flight schedules and leads to cancellations, impacting customer satisfaction",
     "Percentage": -5,
-    "Day": 71
+    "Day": 7
   },
   {
     "stockName": "Carnival Corporation",
@@ -101,7 +101,7 @@
     "Impact": "positive",
     "Message": "Successful launch of new, eco-friendly cruise ships attracts new customers and expands market share",
     "Percentage": 8,
-    "Day": 242
+    "Day": 24
   },
   {
     "stockName": "Carnival Corporation",
@@ -109,7 +109,7 @@
     "Impact": "negative",
     "Message": "Environmental incident involving a cruise ship damages brand reputation and leads to booking cancellations",
     "Percentage": -4,
-    "Day": 107
+    "Day": 10
   },
   {
     "stockName": "Royal Caribbean Group",
@@ -117,7 +117,7 @@
     "Impact": "positive",
     "Message": "Royal Caribbean announces expansion into new cruise destinations, driving excitement and increasing bookings",
     "Percentage": 9,
-    "Day": 334
+    "Day": 33
   },
   {
     "stockName": "Royal Caribbean Group",
@@ -125,6 +125,6 @@
     "Impact": "negative",
     "Message": "Outbreak of contagious illness on a Royal Caribbean cruise ship leads to quarantine and negative publicity",
     "Percentage": -7,
-    "Day": 38
+    "Day": 3
   }
 ]

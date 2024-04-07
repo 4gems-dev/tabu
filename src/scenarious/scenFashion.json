@@ -53,7 +53,7 @@
     "Impact": "positive",
     "Message": "Strategic acquisition of a popular streetwear brand expands VF's product portfolio and attracts younger demographics",
     "Percentage": 8,
-    "Day": 55
+    "Day": 8
   },
   {
     "stockName": "VF Corporation",
@@ -61,7 +61,7 @@
     "Impact": "negative",
     "Message": "Unfavorable weather conditions lead to weak sales of seasonal apparel lines",
     "Percentage": -6,
-    "Day": 326
+    "Day": 33
   },
   {
     "stockName": "Tapestry",
@@ -69,7 +69,7 @@
     "Impact": "positive",
     "Message": "Successful launch of a new handbag line featuring a popular celebrity collaboration drives up sales",
     "Percentage": 12,
-    "Day": 93
+    "Day": 45
   },
   {
     "stockName": "Tapestry",
@@ -77,7 +77,7 @@
     "Impact": "negative",
     "Message": "Counterfeiting of popular Coach brand products increases in key markets, hurting brand image and revenue",
     "Percentage": -6,
-    "Day": 315
+    "Day": 55
   },
   {
     "stockName": "Ralph Lauren",
@@ -85,7 +85,7 @@
     "Impact": "positive",
     "Message": "Strong growth in the luxury apparel market in China benefits Ralph Lauren's high-end product lines",
     "Percentage": 10,
-    "Day": 262
+    "Day": 11
   },
   {
     "stockName": "Ralph Lauren",
@@ -93,7 +93,7 @@
     "Impact": "negative",
     "Message": "Departing creative director leads to a lack of design direction and a decline in brand appeal",
     "Percentage": -5,
-    "Day": 129
+    "Day": 5
   },
   {
     "stockName": "PVH Corp.",
@@ -101,7 +101,7 @@
     "Impact": "positive",
     "Message": "Strategic acquisition of a popular online fashion brand expands PVH's e-commerce presence",
     "Percentage": 8,
-    "Day": 340
+    "Day": 32
   },
   {
     "stockName": "PVH Corp.",
@@ -109,7 +109,7 @@
     "Impact": "negative",
     "Message": "Rising cotton prices due to global shortages increase production costs and pressure profit margins",
     "Percentage": -4,
-    "Day": 67
+    "Day": 27
   },
   {
     "stockName": "Hanesbrands",
@@ -117,7 +117,7 @@
     "Impact": "positive",
     "Message": "Successful marketing campaign for a new line of eco-friendly underwear resonates with consumers",
     "Percentage": 9,
-    "Day": 200
+    "Day": 74
   },
   {
     "stockName": "Hanesbrands",

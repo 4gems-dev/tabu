@@ -5,7 +5,7 @@
     "Impact": "positive",
     "Message": "Successful late-stage clinical trial results for new cancer treatment lead to surge in optimism",
     "Percentage": 14,
-    "Day": 224
+    "Day": 12
   },
   {
     "stockName": "Johnson & Johnson",
@@ -13,7 +13,7 @@
     "Impact": "positive",
     "Message": "Strong demand for company's medical devices in emerging markets drives revenue growth",
     "Percentage": 9,
-    "Day": 73
+    "Day": 32
   },
   {
     "stockName": "Johnson & Johnson",
@@ -21,7 +21,7 @@
     "Impact": "negative",
     "Message": "Product recall of a major pharmaceutical product due to safety concerns",
     "Percentage": -7,
-    "Day": 197
+    "Day": 11
   },
   {
     "stockName": "Johnson & Johnson",
@@ -29,7 +29,7 @@
     "Impact": "negative",
     "Message": "Lawsuit filed alleging negative side effects of a popular company medication",
     "Percentage": -5,
-    "Day": 341
+    "Day": 3
   },
   {
     "stockName": "UnitedHealth Group",
@@ -37,7 +37,7 @@
     "Impact": "positive",
     "Message": "Exceeds enrollment expectations for new Medicare Advantage health insurance plans",
     "Percentage": 11,
-    "Day": 130
+    "Day": 20
   },
   {
     "stockName": "UnitedHealth Group",
@@ -45,7 +45,7 @@
     "Impact": "positive",
     "Message": "Strong financial performance driven by cost-containment measures and rising healthcare demand",
     "Percentage": 8,
-    "Day": 301
+    "Day": 17
   },
   {
     "stockName": "UnitedHealth Group",
@@ -53,7 +53,7 @@
     "Impact": "negative",
     "Message": "Government investigation into potential anti-competitive practices in the health insurance market",
     "Percentage": -6,
-    "Day": 271
+    "Day": 29
   },
   {
     "stockName": "UnitedHealth Group",
@@ -61,7 +61,7 @@
     "Impact": "negative",
     "Message": "Major cyberattack disrupts healthcare operations and exposes patient data",
     "Percentage": -4,
-    "Day": 45
+    "Day": 32
   },
   {
     "stockName": "Pfizer",
@@ -69,7 +69,7 @@
     "Impact": "positive",
     "Message": "Develops successful new vaccine against a contagious new disease",
     "Percentage": 15,
-    "Day": 90
+    "Day": 44
   },
   {
     "stockName": "Pfizer",
@@ -77,7 +77,7 @@
     "Impact": "positive",
     "Message": "Strong sales growth for existing blockbuster drugs exceeds analyst expectations",
     "Percentage": 10,
-    "Day": 214
+    "Day": 2
   },
   {
     "stockName": "Pfizer",
@@ -85,7 +85,7 @@
     "Impact": "negative",
     "Message": "Delays in regulatory approval for a promising new drug candidate",
     "Percentage": -8,
-    "Day": 318
+    "Day": 38
   },
   {
     "stockName": "Pfizer",
@@ -93,7 +93,7 @@
     "Impact": "negative",
     "Message": "Lawsuit filed by competitor alleging patent infringement on a key medication",
     "Percentage": -6,
-    "Day": 163
+    "Day": 34
   },
   {
     "stockName": "Abbott Laboratories",
@@ -101,7 +101,7 @@
     "Impact": "positive",
     "Message": "Groundbreaking innovation in diabetes management technology leads to significant market share gains",
     "Percentage": 12,
-    "Day": 52
+    "Day": 2
   },
   {
     "stockName": "Abbott Laboratories",
@@ -109,7 +109,7 @@
     "Impact": "positive",
     "Message": "Strategic acquisition of a competitor in the diagnostics space expands product portfolio",
     "Percentage": 7,
-    "Day": 180
+    "Day": 1
   },
   {
     "stockName": "Abbott Laboratories",
@@ -117,7 +117,7 @@
     "Impact": "negative",
     "Message": "Large-scale product recall of a critical medical device due to manufacturing defects",
     "Percentage": -9,
-    "Day": 243
+    "Day": 14
   },
   {
     "stockName": "Abbott Laboratories",
@@ -125,7 +125,7 @@
     "Impact": "negative",
     "Message": "Disappointing results from clinical trials for a highly anticipated new drug",
     "Percentage": -5,
-    "Day": 334
+    "Day": 20
   },
   {
     "stockName": "Medtronic",
@@ -133,7 +133,7 @@
     "Impact": "positive",
     "Message": "Successful launch of next-generation heart pump technology exceeds analyst expectations",
     "Percentage": 12,
-    "Day": 114
+    "Day": 35
   },
   {
     "stockName": "Medtronic",
@@ -141,7 +141,7 @@
     "Impact": "positive",
     "Message": "Strategic partnership with leading medical research institution for future innovation",
     "Percentage": 8,
-    "Day": 288
+    "Day": 22
   },
   {
     "stockName": "Medtronic",
@@ -149,7 +149,7 @@
     "Impact": "negative",
     "Message": "Cybersecurity breach exposes patient data from implanted medical devices",
     "Percentage": -7,
-    "Day": 321
+    "Day": 32
   },
   {
     "stockName": "Medtronic",
@@ -157,7 +157,7 @@
     "Impact": "negative",
     "Message": "Product recall of a surgical device due to safety concerns identified in post-market surveillance",
     "Percentage": -5,
-    "Day": 59
+    "Day": 55
   },
   {
     "stockName": "Thermo Fisher",
@@ -165,7 +165,7 @@
     "Impact": "positive",
     "Message": "Strong demand for COVID-19 testing kits and diagnostics boosts company revenue",
     "Percentage": 14,
-    "Day": 231
+    "Day": 12
   },
   {
     "stockName": "Thermo Fisher",
@@ -173,7 +173,7 @@
     "Impact": "positive",
     "Message": "Acquisition of a leading competitor in the life sciences research tools market expands product portfolio",
     "Percentage": 9,
-    "Day": 87
+    "Day": 5
   },
   {
     "stockName": "Thermo Fisher",
@@ -181,7 +181,7 @@
     "Impact": "negative",
     "Message": "Slowdown in research and development spending due to global economic uncertainty",
     "Percentage": -6,
-    "Day": 147
+    "Day": 15
   },
   {
     "stockName": "Thermo Fisher",
@@ -189,7 +189,7 @@
     "Impact": "negative",
     "Message": "Manufacturing plant shutdown due to fire disrupts production of key scientific instruments",
     "Percentage": -4,
-    "Day": 358
+    "Day": 18
   },
   {
     "stockName": "Procter & Gamble",
@@ -245,7 +245,7 @@
     "Impact": "negative",
     "Message": "Halt in clinical trials for a promising new cancer drug due to safety concerns",
     "Percentage": -8,
-    "Day": 331
+    "Day": 33
   },
   {
     "stockName": "Eli Lilly",

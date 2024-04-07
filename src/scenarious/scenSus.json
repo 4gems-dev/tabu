@@ -53,7 +53,7 @@
     "Impact": "positive",
     "Message": "Strong e-commerce growth drives demand for warehouse space, benefiting Prologis' vast portfolio",
     "Percentage": 8,
-    "Day": 207
+    "Day": 20
   },
   {
     "stockName": "Prologis",
@@ -61,7 +61,7 @@
     "Impact": "negative",
     "Message": "Economic slowdown leads to a decrease in demand for warehouse space and rental rates",
     "Percentage": -6,
-    "Day": 42
+    "Day": 4
   },
   {
     "stockName": "Equinix",
@@ -69,7 +69,7 @@
     "Impact": "positive",
     "Message": "Secures major contracts with leading cloud computing providers for data center expansion",
     "Percentage": 12,
-    "Day": 99
+    "Day": 9
   },
   {
     "stockName": "Equinix",
@@ -77,7 +77,7 @@
     "Impact": "negative",
     "Message": "Geopolitical tensions disrupt key markets and slow down international expansion plans",
     "Percentage": -6,
-    "Day": 345
+    "Day": 3
   },
   {
     "stockName": "Digital Realty Trust",
@@ -85,7 +85,7 @@
     "Impact": "positive",
     "Message": "Strong growth in demand for data center space in key markets like Asia and Europe",
     "Percentage": 10,
-    "Day": 221
+    "Day": 22
   },
   {
     "stockName": "Digital Realty Trust",
@@ -93,7 +93,7 @@
     "Impact": "negative",
     "Message": "Data center outage caused by technical failure disrupts customer operations",
     "Percentage": -5,
-    "Day": 156
+    "Day": 15
   },
   {
     "stockName": "Waste Management",
@@ -101,7 +101,7 @@
     "Impact": "positive",
     "Message": "Successful implementation of new recycling and waste-to-energy initiatives expands revenue streams",
     "Percentage": 8,
-    "Day": 50
+    "Day": 5
   },
   {
     "stockName": "Waste Management",
@@ -109,7 +109,7 @@
     "Impact": "negative",
     "Message": "New regulations on waste disposal fees implemented by local governments hurt profitability",
     "Percentage": -4,
-    "Day": 285
+    "Day": 28
   },
   {
     "stockName": "First Solar",
@@ -117,7 +117,7 @@
     "Impact": "positive",
     "Message": "Technological breakthrough in solar panel efficiency leads to increased market share and profitability",
     "Percentage": 14,
-    "Day": 178
+    "Day": 17
   },
   {
     "stockName": "First Solar",
@@ -125,6 +125,6 @@
     "Impact": "negative",
     "Message": "Trade war with key international partners disrupts supply chain and raises production costs",
     "Percentage": -7,
-    "Day": 309
+    "Day": 30
   }
 ]

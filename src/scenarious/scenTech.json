@@ -53,7 +53,7 @@
     "Impact": "negative",
     "Message": "Weak sales for new Surface Laptop due to higher pricing compared to competitors",
     "Percentage": -4,
-    "Day": 184
+    "Day": 18
   },
   {
     "stockName": "Microsoft",
@@ -61,7 +61,7 @@
     "Impact": "negative",
     "Message": "Data breach exposes personal information of LinkedIn users, hurting user trust",
     "Percentage": -3,
-    "Day": 315
+    "Day": 31
   },
   {
     "stockName": "Nvidia",
@@ -69,7 +69,7 @@
     "Impact": "positive",
     "Message": "Groundbreaking advancements in AI chip technology lead to new partnerships with tech giants",
     "Percentage": 14,
-    "Day": 109
+    "Day": 10
   },
   {
     "stockName": "Nvidia",
@@ -77,7 +77,7 @@
     "Impact": "positive",
     "Message": "Strong demand for Nvidia GPUs from cloud computing providers for data center expansion",
     "Percentage": 10,
-    "Day": 25
+    "Day": 2
   },
   {
     "stockName": "Nvidia",
@@ -93,7 +93,7 @@
     "Impact": "negative",
     "Message": "New regulations in South Korea restrict cryptocurrency mining, impacting GPU sales",
     "Percentage": -9,
-    "Day": 227
+    "Day": 22
   },
   {
     "stockName": "Alphabet (Google)",
@@ -101,7 +101,7 @@
     "Impact": "positive",
     "Message": "Google AI develops revolutionary protein folding technology with applications in medicine",
     "Percentage": 12,
-    "Day": 142
+    "Day": 14
   },
   {
     "stockName": "Alphabet (Google)",
@@ -109,7 +109,7 @@
     "Message": "Record advertising revenue driven by strong performance in YouTube and Search",
     "Impact": "positive",
     "Percentage": 9,
-    "Day": 329
+    "Day": 32
   },
   {
     "stockName": "Alphabet (Google)",
@@ -117,7 +117,7 @@
     "Impact": "negative",
     "Message": "US government launches antitrust lawsuit against Google for alleged search bias",
     "Percentage": -7,
-    "Day": 218
+    "Day": 21
   },
   {
     "stockName": "Alphabet (Google)",
@@ -125,7 +125,7 @@
     "Impact": "negative",
     "Message": "Data security breach exposes personal information of millions of Google Cloud users",
     "Percentage": -5,
-    "Day": 84
+    "Day": 8
   },
   {
     "stockName": "Amazon",
@@ -133,7 +133,7 @@
     "Impact": "positive",
     "Message": "Amazon unveils drone delivery service, exceeding expectations for efficiency gains",
     "Percentage": 11,
-    "Day": 291
+    "Day": 29
   },
   {
     "stockName": "Amazon",
@@ -141,7 +141,7 @@
     "Impact": "positive",
     "Message": "Record holiday season sales driven by strong online shopping growth",
     "Percentage": 8,
-    "Day": 56
+    "Day": 5
   },
   {
     "stockName": "Amazon",
@@ -149,7 +149,7 @@
     "Impact": "negative",
     "Message": "Unionization efforts gain momentum at Amazon warehouses, raising labor cost concerns",
     "Percentage": -4,
-    "Day": 173
+    "Day": 17
   },
   {
     "stockName": "Amazon",
@@ -157,7 +157,7 @@
     "Impact": "negative",
     "Message": "Slowdown in cloud computing growth for Amazon Web Services due to increased competition",
     "Percentage": -6,
-    "Day": 304
+    "Day": 30
   },
   {
     "stockName": "Salesforce",
@@ -165,7 +165,7 @@
     "Impact": "positive",
     "Message": "Salesforce launches innovative customer relationship management (CRM) platform with AI features",
     "Percentage": 10,
-    "Day": 234
+    "Day": 23
   },
   {
     "stockName": "Salesforce",
@@ -173,7 +173,7 @@
     "Impact": "positive",
     "Message": "Strong customer acquisition in the enterprise software market boosts Salesforce revenue",
     "Percentage": 7,
-    "Day": 121
+    "Day": 12
   },
   {
     "stockName": "Salesforce",
@@ -181,7 +181,7 @@
     "Impact": "negative",
     "Message": "Data security breach exposes sensitive customer data of Salesforce clients",
     "Percentage": -5,
-    "Day": 95
+    "Day": 9
   },
   {
     "stockName": "Salesforce",
@@ -189,7 +189,7 @@
     "Impact": "negative",
     "Message": "Slower than expected growth in international markets hurts overall sales figures",
     "Percentage": -3,
-    "Day": 352
+    "Day": 35
   },
   {
     "stockName": "Adobe",
@@ -197,7 +197,7 @@
     "Impact": "positive",
     "Message": "Successful launch of new subscription-based design software suite exceeds analyst expectations",
     "Percentage": 13,
-    "Day": 261
+    "Day": 26
   },
   {
     "stockName": "Adobe",
@@ -205,7 +205,7 @@
     "Impact": "positive",
     "Message": "Strong adoption of Adobe Creative Cloud by educational institutions drives subscription growth",
     "Percentage": 8,
-    "Day": 117
+    "Day": 11
   },
   {
     "stockName": "Adobe",
@@ -213,7 +213,7 @@
     "Impact": "negative",
     "Message": "Security vulnerabilities discovered in popular Adobe software products raise customer concerns",
     "Percentage": -6,
-    "Day": 338
+    "Day": 33
   },
   {
     "stockName": "Adobe",
@@ -221,7 +221,7 @@
     "Impact": "negative",
     "Message": "Slowdown in advertising spending due to economic uncertainty hurts Adobe's digital marketing revenue",
     "Percentage": -4,
-    "Day": 49
+    "Day": 4
   },
   {
     "stockName": "Cisco",
@@ -229,7 +229,7 @@
     "Impact": "positive",
     "Message": "Cisco unveils innovative new networking technology that improves data center efficiency",
     "Percentage": 10,
-    "Day": 81
+    "Day": 8
   },
   {
     "stockName": "Cisco",
@@ -237,7 +237,7 @@
     "Impact": "positive",
     "Message": "Increased demand for cybersecurity solutions from Cisco benefits from rising cyber threats",
     "Percentage": 7,
-    "Day": 208
+    "Day": 20
   },
   {
     "stockName": "Cisco",
@@ -245,7 +245,7 @@
     "Impact": "negative",
     "Message": "Major competitor undercuts Cisco on pricing for key networking equipment",
     "Percentage": -5,
-    "Day": 150
+    "Day": 15
   },
   {
     "stockName": "Cisco",
@@ -253,6 +253,6 @@
     "Impact": "negative",
     "Message": "Disappointing earnings report reveals weaker than expected sales in emerging markets",
     "Percentage": -3,
-    "Day": 324
+    "Day": 32
   }
 ]
