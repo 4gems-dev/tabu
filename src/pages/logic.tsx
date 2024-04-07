@@ -8,43 +8,16 @@ import {
 } from "@/components/ui/table";
 import { parseAmount } from "@/lib";
 import { useInvestmentState } from "@/state/investmentState";
+import { ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 
 export default function LogicStocks() {
-  // const [data, setData] = useState<Record<string, any>>([]);
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const stocks = await getStocks(
-  //       usePreferencesState.getState().interests,
-  //       usePreferencesState.getState().budget ?? 0
-  //     );
-  //     console.log(stocks);
-
-  //     setData(stocks);
-  //   })();
-  // }, []);
-
-  // function roundToFourDecimalPlaces(num: number): number {
-  //   return parseFloat(num.toFixed(4));
-  // }
-
-  // function handleInfinity(num: number): string | number {
-  //   if (num === Infinity) {
-  //     return "-";
-  //   } else {
-  //     return num;
-  //   }
-  // }
-
-  function getRandomImage(): string {
-    const randomNumber = Math.random();
-
-    if (randomNumber < 0.5) {
-      return "/icon-rate-down.png";
-    } else {
-      return "/icon-rate-up.png";
-    }
-  }
+  const getIcon = () => {
+    return Math.random() < 0.5 ? (
+      <ChevronDownIcon className="text-red-600" />
+    ) : (
+      <ChevronUpIcon className="text-green-600" />
+    );
+  };
 
   const { stocks } = useInvestmentState();
 
@@ -52,7 +25,6 @@ export default function LogicStocks() {
     <>
       <p className="mb-2 font-semibold">My stocks</p>
       <Table>
-        {/* <TableCaption>A list of your owned Stocks.</TableCaption> */}
         <TableHeader>
           <TableRow>
             <TableHead className="w-max">Name</TableHead>
@@ -80,7 +52,7 @@ export default function LogicStocks() {
                 <TableCell>{amount.toFixed(4).replace(".", ",")}</TableCell>
                 <TableCell>{parseAmount(amount * price)}</TableCell>
                 <TableCell>
-                  {<img src={getRandomImage()} className="ml-4" />}
+                  <div className="ml-4">{getIcon()}</div>
                 </TableCell>
               </TableRow>
             );
