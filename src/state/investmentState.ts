@@ -1,3 +1,4 @@
+import { getStocks } from "@/lib/static/stockNames";
 import { create } from "zustand";
 
 export type InvestmentStateType = {
@@ -22,7 +23,7 @@ export type InvestmentStateType = {
   /**
    * current & history data
    */
-  stocks: Record<string, { amount: number; price: number }[]>;
+  stocks: Record<string, { amount: number; price: number; name: string }[]>;
 
   // buy: (symbol: string, amount: number) => void;
   // sell: (symbol: string, amount: number) => void;
@@ -39,12 +40,7 @@ export type InvestmentStateType = {
 
   update: () => void;
 
-  init: (
-    stocks: Record<
-      string,
-      { symbol: string; amount: number; stockPrice: number }
-    >
-  ) => void;
+  init: (stocks: Awaited<ReturnType<typeof getStocks>>) => void;
 };
 
 export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
@@ -83,6 +79,7 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
           {
             amount: selectedStockCurrent.amount + actionValue * amount,
             price: selectedStockCurrent.price,
+            name: selectedStockCurrent.name,
           },
         ],
       },
@@ -107,7 +104,9 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
     const drift = 0.001;
     const volatility = 0.01;
 
-    for (const [symbol, [...data]] of Object.entries(stocks)) {
+    for (const [symbol, _data] of Object.entries(stocks)) {
+      const data = [..._data];
+
       const currData = data[data.length - 1];
 
       const change = Math.random() * volatility - volatility / 2;
@@ -115,7 +114,7 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
       const newPrice = currData.price + currData.price * (change + drift);
 
       data.push({
-        amount: currData.amount,
+        ...currData,
         price: newPrice,
       });
 
@@ -133,12 +132,14 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
   init: (newStocks) => {
     let totalStockAmount = 0;
     const stocksAmount: InvestmentStateType["stocks"] = {};
-    for (const { stockPrice, symbol, amount } of Object.values(newStocks)) {
+    for (const { stockPrice, symbol, amount, name } of Object.values(
+      newStocks
+    )) {
       const stockAmount = amount * stockPrice;
       totalStockAmount += stockAmount;
 
       stocksAmount[symbol] = [];
-      stocksAmount[symbol].push({ amount, price: stockPrice });
+      stocksAmount[symbol].push({ amount, price: stockPrice, name });
     }
 
     set({
