@@ -1,0 +1,260 @@
+[
+  {
+    "stockName": "Johnson & Johnson",
+    "stockId": "JNJ",
+    "Impact": "positive",
+    "Message": "Successful late-stage clinical trial results for new cancer treatment lead to surge in optimism",
+    "Percentage": 14,
+    "Day": 224
+  },
+  {
+    "stockName": "Johnson & Johnson",
+    "stockId": "JNJ",
+    "Impact": "positive",
+    "Message": "Strong demand for company's medical devices in emerging markets drives revenue growth",
+    "Percentage": 9,
+    "Day": 73
+  },
+  {
+    "stockName": "Johnson & Johnson",
+    "stockId": "JNJ",
+    "Impact": "negative",
+    "Message": "Product recall of a major pharmaceutical product due to safety concerns",
+    "Percentage": -7,
+    "Day": 197
+  },
+  {
+    "stockName": "Johnson & Johnson",
+    "stockId": "JNJ",
+    "Impact": "negative",
+    "Message": "Lawsuit filed alleging negative side effects of a popular company medication",
+    "Percentage": -5,
+    "Day": 341
+  },
+  {
+    "stockName": "UnitedHealth Group",
+    "stockId": "UNH",
+    "Impact": "positive",
+    "Message": "Exceeds enrollment expectations for new Medicare Advantage health insurance plans",
+    "Percentage": 11,
+    "Day": 130
+  },
+  {
+    "stockName": "UnitedHealth Group",
+    "stockId": "UNH",
+    "Impact": "positive",
+    "Message": "Strong financial performance driven by cost-containment measures and rising healthcare demand",
+    "Percentage": 8,
+    "Day": 301
+  },
+  {
+    "stockName": "UnitedHealth Group",
+    "stockId": "UNH",
+    "Impact": "negative",
+    "Message": "Government investigation into potential anti-competitive practices in the health insurance market",
+    "Percentage": -6,
+    "Day": 271
+  },
+  {
+    "stockName": "UnitedHealth Group",
+    "stockId": "UNH",
+    "Impact": "negative",
+    "Message": "Major cyberattack disrupts healthcare operations and exposes patient data",
+    "Percentage": -4,
+    "Day": 45
+  },
+  {
+    "stockName": "Pfizer",
+    "stockId": "PFE",
+    "Impact": "positive",
+    "Message": "Develops successful new vaccine against a contagious new disease",
+    "Percentage": 15,
+    "Day": 90
+  },
+  {
+    "stockName": "Pfizer",
+    "stockId": "PFE",
+    "Impact": "positive",
+    "Message": "Strong sales growth for existing blockbuster drugs exceeds analyst expectations",
+    "Percentage": 10,
+    "Day": 214
+  },
+  {
+    "stockName": "Pfizer",
+    "stockId": "PFE",
+    "Impact": "negative",
+    "Message": "Delays in regulatory approval for a promising new drug candidate",
+    "Percentage": -8,
+    "Day": 318
+  },
+  {
+    "stockName": "Pfizer",
+    "stockId": "PFE",
+    "Impact": "negative",
+    "Message": "Lawsuit filed by competitor alleging patent infringement on a key medication",
+    "Percentage": -6,
+    "Day": 163
+  },
+  {
+    "stockName": "Abbott Laboratories",
+    "stockId": "ABT",
+    "Impact": "positive",
+    "Message": "Groundbreaking innovation in diabetes management technology leads to significant market share gains",
+    "Percentage": 12,
+    "Day": 52
+  },
+  {
+    "stockName": "Abbott Laboratories",
+    "stockId": "ABT",
+    "Impact": "positive",
+    "Message": "Strategic acquisition of a competitor in the diagnostics space expands product portfolio",
+    "Percentage": 7,
+    "Day": 180
+  },
+  {
+    "stockName": "Abbott Laboratories",
+    "stockId": "ABT",
+    "Impact": "negative",
+    "Message": "Large-scale product recall of a critical medical device due to manufacturing defects",
+    "Percentage": -9,
+    "Day": 243
+  },
+  {
+    "stockName": "Abbott Laboratories",
+    "stockId": "ABT",
+    "Impact": "negative",
+    "Message": "Disappointing results from clinical trials for a highly anticipated new drug",
+    "Percentage": -5,
+    "Day": 334
+  },
+  {
+    "stockName": "Medtronic",
+    "stockId": "MDT",
+    "Impact": "positive",
+    "Message": "Successful launch of next-generation heart pump technology exceeds analyst expectations",
+    "Percentage": 12,
+    "Day": 114
+  },
+  {
+    "stockName": "Medtronic",
+    "stockId": "MDT",
+    "Impact": "positive",
+    "Message": "Strategic partnership with leading medical research institution for future innovation",
+    "Percentage": 8,
+    "Day": 288
+  },
+  {
+    "stockName": "Medtronic",
+    "stockId": "MDT",
+    "Impact": "negative",
+    "Message": "Cybersecurity breach exposes patient data from implanted medical devices",
+    "Percentage": -7,
+    "Day": 321
+  },
+  {
+    "stockName": "Medtronic",
+    "stockId": "MDT",
+    "Impact": "negative",
+    "Message": "Product recall of a surgical device due to safety concerns identified in post-market surveillance",
+    "Percentage": -5,
+    "Day": 59
+  },
+  {
+    "stockName": "Thermo Fisher",
+    "stockId": "TMO",
+    "Impact": "positive",
+    "Message": "Strong demand for COVID-19 testing kits and diagnostics boosts company revenue",
+    "Percentage": 14,
+    "Day": 231
+  },
+  {
+    "stockName": "Thermo Fisher",
+    "stockId": "TMO",
+    "Impact": "positive",
+    "Message": "Acquisition of a leading competitor in the life sciences research tools market expands product portfolio",
+    "Percentage": 9,
+    "Day": 87
+  },
+  {
+    "stockName": "Thermo Fisher",
+    "stockId": "TMO",
+    "Impact": "negative",
+    "Message": "Slowdown in research and development spending due to global economic uncertainty",
+    "Percentage": -6,
+    "Day": 147
+  },
+  {
+    "stockName": "Thermo Fisher",
+    "stockId": "TMO",
+    "Impact": "negative",
+    "Message": "Manufacturing plant shutdown due to fire disrupts production of key scientific instruments",
+    "Percentage": -4,
+    "Day": 358
+  },
+  {
+    "stockName": "Procter & Gamble",
+    "stockId": "PG",
+    "Impact": "positive",
+    "Message": "Successful launch of new eco-friendly cleaning product line resonates with consumers",
+    "Percentage": 11,
+    "Day": 204
+  },
+  {
+    "stockName": "Procter & Gamble",
+    "stockId": "PG",
+    "Impact": "positive",
+    "Message": "Strong growth in emerging markets driven by rising disposable income and brand recognition",
+    "Percentage": 7,
+    "Day": 63
+  },
+  {
+    "stockName": "Procter & Gamble",
+    "stockId": "PG",
+    "Impact": "negative",
+    "Message": "Increased competition from private label brands puts pressure on product pricing and market share",
+    "Percentage": -5,
+    "Day": 170
+  },
+  {
+    "stockName": "Procter & Gamble",
+    "stockId": "PG",
+    "Impact": "negative",
+    "Message": "Rising commodity costs lead to higher production expenses and potential product price increases",
+    "Percentage": -3,
+    "Day": 297
+  },
+  [
+    {
+      "stockName": "Eli Lilly",
+      "stockId": "LLY",
+      "Impact": "positive",
+      "Message": "Successful late-stage clinical trial results for a new Alzheimer's disease treatment",
+      "Percentage": 15,
+      "Day": 128
+    },
+    {
+      "stockName": "Eli Lilly",
+      "stockId": "LLY",
+      "Impact": "positive",
+      "Message": "Strong sales growth for existing diabetes medications exceeds analyst expectations",
+      "Percentage": 10,
+      "Day": 294
+    },
+    {
+      "stockName": "Eli Lilly",
+      "stockId": "LLY",
+      "Impact": "negative",
+      "Message": "Halt in clinical trials for a promising new cancer drug due to safety concerns",
+      "Percentage": -8,
+      "Day": 331
+    },
+    {
+      "stockName": "Eli Lilly",
+      "stockId": "LLY",
+      "Impact": "negative",
+      "Message": "Lawsuit filed by competitor alleging patent infringement on a key drug",
+      "Percentage": -6,
+      "Day": 61
+    }
+  ]
+]

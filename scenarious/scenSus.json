@@ -1,0 +1,130 @@
+[
+  {
+    "stockName": "NextEra Energy",
+    "stockId": "NEE",
+    "Impact": "positive",
+    "Message": "Exceeds expectations for new solar and wind energy generation capacity, driving strong earnings",
+    "Percentage": 13,
+    "Day": 252
+  },
+  {
+    "stockName": "NextEra Energy",
+    "stockId": "NEE",
+    "Impact": "negative",
+    "Message": "Major hurricane damages key power generation infrastructure in the Southeast US",
+    "Percentage": -7,
+    "Day": 189
+  },
+  {
+    "stockName": "Brookfield Renewable Partners",
+    "stockId": "BEP",
+    "Impact": "positive",
+    "Message": "Secures major government contracts for new hydroelectric power plants in developing countries",
+    "Percentage": 11,
+    "Day": 76
+  },
+  {
+    "stockName": "Brookfield Renewable Partners",
+    "stockId": "BEP",
+    "Impact": "negative",
+    "Message": "Unexpected policy changes in a key market restrict growth of renewable energy projects",
+    "Percentage": -5,
+    "Day": 312
+  },
+  {
+    "stockName": "American Water Works",
+    "stockId": "AWK",
+    "Impact": "positive",
+    "Message": "Large infrastructure investment by government to upgrade water treatment facilities benefits AWK",
+    "Percentage": 9,
+    "Day": 143
+  },
+  {
+    "stockName": "American Water Works",
+    "stockId": "AWK",
+    "Impact": "negative",
+    "Message": "Severe drought conditions in key operating regions lead to water use restrictions and lower revenue",
+    "Percentage": -4,
+    "Day": 278
+  },
+  {
+    "stockName": "Prologis",
+    "stockId": "PLD",
+    "Impact": "positive",
+    "Message": "Strong e-commerce growth drives demand for warehouse space, benefiting Prologis' vast portfolio",
+    "Percentage": 8,
+    "Day": 207
+  },
+  {
+    "stockName": "Prologis",
+    "stockId": "PLD",
+    "Impact": "negative",
+    "Message": "Economic slowdown leads to a decrease in demand for warehouse space and rental rates",
+    "Percentage": -6,
+    "Day": 42
+  },
+  {
+    "stockName": "Equinix",
+    "stockId": "EQIX",
+    "Impact": "positive",
+    "Message": "Secures major contracts with leading cloud computing providers for data center expansion",
+    "Percentage": 12,
+    "Day": 99
+  },
+  {
+    "stockName": "Equinix",
+    "stockId": "EQIX",
+    "Impact": "negative",
+    "Message": "Geopolitical tensions disrupt key markets and slow down international expansion plans",
+    "Percentage": -6,
+    "Day": 345
+  },
+  {
+    "stockName": "Digital Realty Trust",
+    "stockId": "DLR",
+    "Impact": "positive",
+    "Message": "Strong growth in demand for data center space in key markets like Asia and Europe",
+    "Percentage": 10,
+    "Day": 221
+  },
+  {
+    "stockName": "Digital Realty Trust",
+    "stockId": "DLR",
+    "Impact": "negative",
+    "Message": "Data center outage caused by technical failure disrupts customer operations",
+    "Percentage": -5,
+    "Day": 156
+  },
+  {
+    "stockName": "Waste Management",
+    "stockId": "WM",
+    "Impact": "positive",
+    "Message": "Successful implementation of new recycling and waste-to-energy initiatives expands revenue streams",
+    "Percentage": 8,
+    "Day": 50
+  },
+  {
+    "stockName": "Waste Management",
+    "stockId": "WM",
+    "Impact": "negative",
+    "Message": "New regulations on waste disposal fees implemented by local governments hurt profitability",
+    "Percentage": -4,
+    "Day": 285
+  },
+  {
+    "stockName": "First Solar",
+    "stockId": "FSLR",
+    "Impact": "positive",
+    "Message": "Technological breakthrough in solar panel efficiency leads to increased market share and profitability",
+    "Percentage": 14,
+    "Day": 178
+  },
+  {
+    "stockName": "First Solar",
+    "stockId": "FSLR",
+    "Impact": "negative",
+    "Message": "Trade war with key international partners disrupts supply chain and raises production costs",
+    "Percentage": -7,
+    "Day": 309
+  }
+]

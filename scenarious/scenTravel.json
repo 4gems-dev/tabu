@@ -1,0 +1,130 @@
+[
+  {
+    "stockName": "Booking Holdings",
+    "stockId": "BKNG",
+    "Impact": "positive",
+    "Message": "Strong travel rebound after pandemic restrictions ease, exceeding booking expectations",
+    "Percentage": 11,
+    "Day": 248
+  },
+  {
+    "stockName": "Booking Holdings",
+    "stockId": "BKNG",
+    "Impact": "negative",
+    "Message": "Major cyberattack disrupts online booking platform, leading to customer reservation cancellations",
+    "Percentage": -5,
+    "Day": 111
+  },
+  {
+    "stockName": "Expedia Group",
+    "stockId": "EXPE",
+    "Impact": "positive",
+    "Message": "Strategic acquisition of a leading vacation rental platform expands market reach",
+    "Percentage": 9,
+    "Day": 84
+  },
+  {
+    "stockName": "Expedia Group",
+    "stockId": "EXPE",
+    "Impact": "negative",
+    "Message": "Global economic downturn leads to decreased consumer spending on travel",
+    "Percentage": -4,
+    "Day": 337
+  },
+  {
+    "stockName": "Marriott International",
+    "stockId": "MAR",
+    "Impact": "positive",
+    "Message": "Successful launch of new loyalty program offering exclusive benefits drives customer retention",
+    "Percentage": 8,
+    "Day": 154
+  },
+  {
+    "stockName": "Marriott International",
+    "stockId": "MAR",
+    "Impact": "negative",
+    "Message": "Natural disaster damages several key hotel properties in a popular tourist destination",
+    "Percentage": -6,
+    "Day": 281
+  },
+  {
+    "stockName": "Hilton Worldwide Holdings",
+    "stockId": "HLT",
+    "Impact": "positive",
+    "Message": "Strong growth in demand for business travel as companies return to in-person meetings",
+    "Percentage": 10,
+    "Day": 215
+  },
+  {
+    "stockName": "Hilton Worldwide Holdings",
+    "stockId": "HLT",
+    "Impact": "negative",
+    "Message": "Negative publicity surrounding labor disputes with hotel staff hurts brand image and booking rates",
+    "Percentage": -7,
+    "Day": 48
+  },
+  {
+    "stockName": "Delta Air Lines",
+    "stockId": "DAL",
+    "Impact": "positive",
+    "Message": "Airline industry rebounds strongly from pandemic as travel restrictions ease, leading to increased demand for flights",
+    "Percentage": 12,
+    "Day": 275
+  },
+  {
+    "stockName": "Delta Air Lines",
+    "stockId": "DAL",
+    "Impact": "negative",
+    "Message": "Spike in fuel costs due to global geopolitical tensions significantly increases operating expenses",
+    "Percentage": -6,
+    "Day": 140
+  },
+  {
+    "stockName": "Southwest Airlines",
+    "stockId": "LUV",
+    "Impact": "positive",
+    "Message": "Southwest Airlines implements successful cost-cutting measures, boosting profitability",
+    "Percentage": 10,
+    "Day": 308
+  },
+  {
+    "stockName": "Southwest Airlines",
+    "stockId": "LUV",
+    "Impact": "negative",
+    "Message": "Pilot shortage disrupts flight schedules and leads to cancellations, impacting customer satisfaction",
+    "Percentage": -5,
+    "Day": 71
+  },
+  {
+    "stockName": "Carnival Corporation",
+    "stockId": "CCL",
+    "Impact": "positive",
+    "Message": "Successful launch of new, eco-friendly cruise ships attracts new customers and expands market share",
+    "Percentage": 8,
+    "Day": 242
+  },
+  {
+    "stockName": "Carnival Corporation",
+    "stockId": "CCL",
+    "Impact": "negative",
+    "Message": "Environmental incident involving a cruise ship damages brand reputation and leads to booking cancellations",
+    "Percentage": -4,
+    "Day": 107
+  },
+  {
+    "stockName": "Royal Caribbean Group",
+    "stockId": "RCL",
+    "Impact": "positive",
+    "Message": "Royal Caribbean announces expansion into new cruise destinations, driving excitement and increasing bookings",
+    "Percentage": 9,
+    "Day": 334
+  },
+  {
+    "stockName": "Royal Caribbean Group",
+    "stockId": "RCL",
+    "Impact": "negative",
+    "Message": "Outbreak of contagious illness on a Royal Caribbean cruise ship leads to quarantine and negative publicity",
+    "Percentage": -7,
+    "Day": 38
+  }
+]
