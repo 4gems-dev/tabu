@@ -1,5 +1,8 @@
 import Layout from "@/components/Layout/Layout";
 import { Progress } from "@/components/ui/progress";
+import { getStocks } from "@/lib/static/stockNames";
+import { useInvestmentState } from "@/state/investmentState";
+import { usePreferencesState } from "@/state/preferencesState";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -19,6 +22,19 @@ export default function LoadingPage({}: PropsType) {
     const id2 = setInterval(() => {
       setValue((prevNumber) => prevNumber + Math.random() * (600 - 200) + 200);
     }, 400);
+
+    const initPortfolio = async () => {
+      const selectedStocks = await getStocks(
+        usePreferencesState.getState().interests,
+        usePreferencesState.getState().budget ?? 100
+      );
+
+      useInvestmentState.getState().init(selectedStocks);
+
+      console.log(useInvestmentState.getState());
+    };
+
+    initPortfolio();
 
     return () => {
       clearInterval(id1);
