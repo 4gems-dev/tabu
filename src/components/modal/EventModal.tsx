@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useInvestmentState } from "@/state/investmentState";
 import { useState } from "react";
 
 export function EventModal({
@@ -23,7 +24,10 @@ export function EventModal({
   date: string;
   action: (symbol: string, amount: number, action: "buy" | "sell") => void;
 }) {
+  const { resumeSimulation } = useInvestmentState();
   const [isOpen, setIsOpen] = useState(false);
+
+  const [amount, setAmount] = useState(0);
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
@@ -43,9 +47,14 @@ export function EventModal({
           </div>
           <Input
             id="amount"
-            defaultValue="2"
-            type="number"
+            type="text"
             className="col-span-3"
+            value={amount}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+
+              setAmount(isNaN(value) ? 0 : value);
+            }}
           />
         </div>
         <DialogFooter className="flex sm:justify-between w-full h-full ">
@@ -53,7 +62,7 @@ export function EventModal({
             variant="accent"
             className="my-2"
             onClick={() => {
-              action(stock, 2, "sell");
+              action(stock, amount, "sell");
               setIsOpen(false);
             }}
           >
@@ -62,7 +71,10 @@ export function EventModal({
           <Button
             variant="accent"
             className="my-2"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              resumeSimulation();
+            }}
           >
             Hold
           </Button>
@@ -70,7 +82,7 @@ export function EventModal({
             variant="accent"
             className="my-2"
             onClick={() => {
-              action(stock, 2, "buy");
+              action(stock, amount, "buy");
               setIsOpen(false);
             }}
           >

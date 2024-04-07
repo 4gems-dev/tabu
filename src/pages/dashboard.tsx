@@ -19,11 +19,12 @@ import { useEffect, useRef, useState } from "react";
 
 type PropsType = {};
 
-export default function DashboardPage({ }: PropsType) {
+export default function DashboardPage({}: PropsType) {
   const { budget, interests, name, riskTolerance, years } =
     usePreferencesState();
 
-  const { totalStockAmount, stocks, events, action } = useInvestmentState();
+  const { totalStockAmount, stocks, events, action, isSimulationRunning } =
+    useInvestmentState();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -55,7 +56,16 @@ export default function DashboardPage({ }: PropsType) {
   return (
     <Layout title="Dashboard">
       <Container>
-        <h1 className="text-2xl font-semibold">Welcome, {name || "John"}!</h1>
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-semibold">Welcome, {name || "John"}!</h1>
+
+          {!isSimulationRunning && (
+            <div className="px-4 py-2 border-red-600 text-red-400 border rounded-full flex items-center gap-2">
+              <div className="animate-pulse w-3 h-3 rounded-full bg-red-400" />
+              <p className="font-medium">Paused</p>
+            </div>
+          )}
+        </div>
 
         <section className="grid-cols-3 grid gap-4 mt-10">
           <div
@@ -88,7 +98,7 @@ export default function DashboardPage({ }: PropsType) {
             <p className="mb-2 font-semibold text-lg">News</p>
             <ScrollArea className={"rounded-md border p-2 h-[99%]"}>
               {events
-                .reverse()
+                .toReversed()
                 .map(({ message, day, stock: { name, symbol } }, i) => (
                   <Card
                     key={i}
@@ -105,7 +115,12 @@ export default function DashboardPage({ }: PropsType) {
                       <div className=" text-gray-400">
                         {dayjs().add(day, "days").format("DD.MM.YYYY")}
                       </div>
-                      <EventModal stock={symbol} description={message} date={dayjs().add(day, "days").format("DD.MM.YYYY")} action={action}/>
+                      <EventModal
+                        stock={symbol}
+                        description={message}
+                        date={dayjs().add(day, "days").format("DD.MM.YYYY")}
+                        action={action}
+                      />
                     </CardFooter>
                   </Card>
                 ))}

@@ -98,14 +98,19 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
 
     newAvailableAmount += actionValue * selectedStockCurrent.price * amount;
 
+    get().resumeSimulation();
+
     set({
-      fiatAmount: [...get().fiatAmount, newAvailableAmount],
+      fiatAmount: [...get().fiatAmount, Math.max(0, newAvailableAmount)],
       stocks: {
         ...stocks,
         [symbol]: [
           ...selectedStockAllData,
           {
-            amount: selectedStockCurrent.amount + actionValue * amount,
+            amount: Math.max(
+              0,
+              selectedStockCurrent.amount + actionValue * amount
+            ),
             price: selectedStockCurrent.price,
             name: selectedStockCurrent.name,
           },
@@ -154,6 +159,8 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
 
     // const todaysScenarios = [];
 
+    let shouldStop = false;
+
     for (const interest of usePreferencesState.getState().interests) {
       const intScenarios = scenarios[interest];
 
@@ -168,6 +175,8 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
         if (totalStockAmount.length !== Day || !(stockId in newStocks)) {
           continue;
         }
+
+        shouldStop = true;
 
         const current = newStocks[stockId][newStocks[stockId].length - 1];
         newStocks[stockId].push({
@@ -190,6 +199,10 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
           ],
         });
       }
+    }
+
+    if (shouldStop) {
+      get().pauseSimulation();
     }
 
     let newTotalStockAmount = 0;
@@ -223,7 +236,7 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
     set({
       totalStockAmount: [totalStockAmount],
       stocks: stocksAmount,
-      fiatAmount: [0],
+      fiatAmount: [100000000],
       // days: 0,
     });
   },
