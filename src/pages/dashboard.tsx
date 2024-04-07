@@ -2,6 +2,7 @@ import Layout from "@/components/Layout/Layout";
 import Container from "@/components/ui/container";
 import { usePreferencesState } from "@/state/preferencesState";
 import AreaGraph from "@/components/graf/areaGraph";
+import LogicStocks from "@/pages/logic";
 
 type PropsType = {};
 
@@ -22,6 +23,7 @@ export default function DashboardPage({}: PropsType) {
             <AreaGraph />
             <AreaGraph />
             {/*<div className="h-[30rem]" />*/}
+            <LogicStocks/>
           </div>
 
           <div className="row-span-2 p-4 rounded-lg border bg-foreground/5">
