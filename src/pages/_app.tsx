@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Inter as FontSans } from "next/font/google";
 
-const fontSans = FontSans({
+export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
