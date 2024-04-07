@@ -85,6 +85,7 @@ export default function DashboardPage({}: PropsType) {
               "row-span-2 p-4 rounded-lg border bg-foreground/5 overflow-y-auto h-[800px]"
             }
           >
+            <p className="mb-2 font-semibold text-lg">News</p>
             <ScrollArea className={"rounded-md border p-2 h-[99%]"}>
               {events
                 .reverse()
