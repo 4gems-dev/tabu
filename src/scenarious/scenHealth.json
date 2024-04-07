@@ -197,7 +197,7 @@
     "Impact": "positive",
     "Message": "Successful launch of new eco-friendly cleaning product line resonates with consumers",
     "Percentage": 11,
-    "Day": 204
+    "Day": 1
   },
   {
     "stockName": "Procter & Gamble",
@@ -205,7 +205,7 @@
     "Impact": "positive",
     "Message": "Strong growth in emerging markets driven by rising disposable income and brand recognition",
     "Percentage": 7,
-    "Day": 63
+    "Day": 4
   },
   {
     "stockName": "Procter & Gamble",
@@ -213,7 +213,7 @@
     "Impact": "negative",
     "Message": "Increased competition from private label brands puts pressure on product pricing and market share",
     "Percentage": -5,
-    "Day": 170
+    "Day": 8
   },
   {
     "stockName": "Procter & Gamble",
@@ -221,7 +221,7 @@
     "Impact": "negative",
     "Message": "Rising commodity costs lead to higher production expenses and potential product price increases",
     "Percentage": -3,
-    "Day": 297
+    "Day": 12
   },
   {
     "stockName": "Eli Lilly",
@@ -229,7 +229,7 @@
     "Impact": "positive",
     "Message": "Successful late-stage clinical trial results for a new Alzheimer's disease treatment",
     "Percentage": 15,
-    "Day": 128
+    "Day": 16
   },
   {
     "stockName": "Eli Lilly",
@@ -237,7 +237,7 @@
     "Impact": "positive",
     "Message": "Strong sales growth for existing diabetes medications exceeds analyst expectations",
     "Percentage": 10,
-    "Day": 294
+    "Day": 20
   },
   {
     "stockName": "Eli Lilly",

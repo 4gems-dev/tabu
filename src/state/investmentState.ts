@@ -120,7 +120,6 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
     }
 
     const totalStockAmount = [...get().totalStockAmount];
-    let newTotalStockAmount = 0;
 
     const stocks = get().stocks;
     const newStocks = { ...stocks };
@@ -129,17 +128,20 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
       get().init({});
     }
 
-    const drift = 0.001;
-    const volatility = 0.01;
+    // const drift = 0.001;
+    const volatilityUp = 0.001;
+    const volatilityDown = volatilityUp / 2;
 
     for (const [symbol, _data] of Object.entries(stocks)) {
       const data = [..._data];
 
       const currData = data[data.length - 1];
 
-      const change = Math.random() * volatility - volatility / 2;
+      const direction = data.length % 2 === 0 ? 1 : -1;
+      const volatility = direction < 0 ? volatilityDown : volatilityUp;
+      const change = direction * Math.random() * volatility;
 
-      const newPrice = currData.price + currData.price * (change + drift);
+      const newPrice = currData.price + currData.price * change;
 
       data.push({
         ...currData,
@@ -147,7 +149,7 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
       });
 
       newStocks[symbol] = data;
-      newTotalStockAmount += newPrice * currData.amount;
+      // newTotalStockAmount += newPrice * currData.amount;
     }
 
     // const todaysScenarios = [];
@@ -188,6 +190,14 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
           ],
         });
       }
+    }
+
+    let newTotalStockAmount = 0;
+
+    for (const data of Object.values(newStocks)) {
+      const current = data[data.length - 1];
+
+      newTotalStockAmount += current.amount * current.price;
     }
 
     set({

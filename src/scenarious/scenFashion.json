@@ -5,7 +5,7 @@
     "Impact": "positive",
     "Message": "Strong growth in e-commerce sales and sales in China drive record revenue and earnings",
     "Percentage": 13,
-    "Day": 119
+    "Day": 1
   },
   {
     "stockName": "Nike",
@@ -13,7 +13,7 @@
     "Impact": "negative",
     "Message": "Boycott by consumers due to controversial social media campaign hurts brand image and sales",
     "Percentage": -7,
-    "Day": 352
+    "Day": 4
   },
   {
     "stockName": "TJX Companies",
@@ -21,7 +21,7 @@
     "Impact": "positive",
     "Message": "Successful treasure hunt promotion drives increased customer traffic and spending in stores",
     "Percentage": 11,
-    "Day": 287
+    "Day": 8
   },
   {
     "stockName": "TJX Companies",
@@ -29,7 +29,7 @@
     "Impact": "negative",
     "Message": "Global supply chain disruptions lead to inventory shortages and higher product costs",
     "Percentage": -5,
-    "Day": 153
+    "Day": 12
   },
   {
     "stockName": "Lululemon Athletica",
@@ -37,7 +37,7 @@
     "Message": "Expansion into new athletic wear categories like hiking and outdoor apparel increases market share",
     "Impact": "positive",
     "Percentage": 9,
-    "Day": 220
+    "Day": 16
   },
   {
     "stockName": "Lululemon Athletica",
@@ -45,7 +45,7 @@
     "Impact": "negative",
     "Message": "Safety recall of popular yoga pants due to quality control issues damages brand trust",
     "Percentage": -4,
-    "Day": 82
+    "Day": 20
   },
   {
     "stockName": "VF Corporation",

@@ -5,7 +5,7 @@
     "Impact": "positive",
     "Message": "Surprise announcement of augmented reality glasses exceeds analyst expectations",
     "Percentage": 11,
-    "Day": 282
+    "Day": 1
   },
   {
     "stockName": "Apple",
@@ -13,7 +13,7 @@
     "Impact": "positive",
     "Message": "Stronger than expected iPhone sales in China boost overall revenue",
     "Percentage": 7,
-    "Day": 135
+    "Day": 4
   },
   {
     "stockName": "Apple",
@@ -21,7 +21,7 @@
     "Impact": "negative",
     "Message": "Production halt for iPhones due to safety concerns with new battery technology",
     "Percentage": -6,
-    "Day": 92
+    "Day": 8
   },
   {
     "stockName": "Apple",
@@ -29,7 +29,7 @@
     "Impact": "negative",
     "Message": "Lawsuit filed by Epic Games alleging anti-competitive practices in App Store",
     "Percentage": -5,
-    "Day": 348
+    "Day": 12
   },
   {
     "stockName": "Microsoft",
@@ -37,7 +37,7 @@
     "Impact": "positive",
     "Message": "Major partnership with a leading car manufacturer to develop self-driving car software",
     "Percentage": 9,
-    "Day": 201
+    "Day": 16
   },
   {
     "stockName": "Microsoft",
@@ -45,7 +45,7 @@
     "Impact": "positive",
     "Message": "Record number of subscriptions for Xbox Game Pass service drives gaming revenue",
     "Percentage": 8,
-    "Day": 68
+    "Day": 20
   },
   {
     "stockName": "Microsoft",

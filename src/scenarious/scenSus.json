@@ -5,7 +5,7 @@
     "Impact": "positive",
     "Message": "Exceeds expectations for new solar and wind energy generation capacity, driving strong earnings",
     "Percentage": 13,
-    "Day": 252
+    "Day": 1
   },
   {
     "stockName": "NextEra Energy",
@@ -13,7 +13,7 @@
     "Impact": "negative",
     "Message": "Major hurricane damages key power generation infrastructure in the Southeast US",
     "Percentage": -7,
-    "Day": 189
+    "Day": 4
   },
   {
     "stockName": "Brookfield Renewable Partners",
@@ -21,7 +21,7 @@
     "Impact": "positive",
     "Message": "Secures major government contracts for new hydroelectric power plants in developing countries",
     "Percentage": 11,
-    "Day": 76
+    "Day": 8
   },
   {
     "stockName": "Brookfield Renewable Partners",
@@ -29,7 +29,7 @@
     "Impact": "negative",
     "Message": "Unexpected policy changes in a key market restrict growth of renewable energy projects",
     "Percentage": -5,
-    "Day": 312
+    "Day": 12
   },
   {
     "stockName": "American Water Works",
@@ -37,7 +37,7 @@
     "Impact": "positive",
     "Message": "Large infrastructure investment by government to upgrade water treatment facilities benefits AWK",
     "Percentage": 9,
-    "Day": 143
+    "Day": 16
   },
   {
     "stockName": "American Water Works",
@@ -45,7 +45,7 @@
     "Impact": "negative",
     "Message": "Severe drought conditions in key operating regions lead to water use restrictions and lower revenue",
     "Percentage": -4,
-    "Day": 278
+    "Day": 20
   },
   {
     "stockName": "Prologis",
