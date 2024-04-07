@@ -12,33 +12,28 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
 
-export function EventModal() {
+export function EventModal({ stock, description, date, amount }: { stock: string, description: string, date: string, amount: number }) {
     return (
         <Dialog>
             <DialogTrigger asChild >
                 <Button variant="accent">Do something</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-                <DialogHeader>
-                    <DialogTitle>Select your strategy</DialogTitle>
-                    <DialogDescription>
-                        Make changes to your profile here. Click save when you're done.
+            <DialogContent className="max-w-[70%] sm:max-w-[425px] ">
+                <DialogHeader >
+                    <DialogTitle>Select your strategy on stock {stock}</DialogTitle>
+                    <DialogDescription className="pt-2">
+                        {description}
                     </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                            Name
-                        </Label>
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                            Username
-                        </Label>
+                <div className="grid">
+                    <div className=" text-gray-400">
+                        Date: {date}
                     </div>
                 </div>
-                <DialogFooter>
-                    <Button type="submit">Save changes</Button>
+                <DialogFooter className="flex sm:justify-between w-full h-full ">
+                    <Button variant="accent" className="my-2">Buy</Button>
+                    <Button variant="accent" className="my-2">Sell</Button>
+                    <Button variant="accent" className="my-2">Hold</Button>
                 </DialogFooter>
             </DialogContent>
         </Dialog>
