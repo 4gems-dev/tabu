@@ -16,6 +16,49 @@ export function stockNames(interestType: InterestsEnum) {
   }
 }
 
+const stockData: { [symbol: string]: string } = {
+  AAPL: "Apple Inc.",
+  MSFT: "Microsoft Corporation",
+  NVDA: "NVIDIA Corporation",
+  GOOGL: "Alphabet Inc. (Class C)",
+  AMZN: "Amazon.com, Inc.",
+  CRM: "Salesforce.com, Inc.",
+  ADBE: "Adobe Inc.",
+  CSCO: "Cisco Systems, Inc.",
+  JNJ: "Johnson & Johnson",
+  UNH: "UnitedHealth Group Incorporated",
+  PFE: "Pfizer Inc.",
+  ABT: "Abbott Laboratories",
+  MDT: "Medtronic plc",
+  TMO: "Deutsche Telekom AG",
+  PG: "Procter & Gamble Company",
+  LLY: "Eli Lilly and Company",
+  NEE: "NextEra Energy Inc.",
+  BEP: "Bermuda Electric Holdings Limited",
+  AWK: "American Water Works Company Inc.",
+  PLD: "Pinnacle West Capital Corporation",
+  EQIX: "Equinix Inc.",
+  DLR: "Digital Realty Trust Inc.",
+  WM: "Waste Management, Inc.",
+  FSLR: "First Solar, Inc.",
+  BKNG: "Booking Holdings Inc.",
+  EXPE: "Expedia Group Inc.",
+  MAR: "Marriott International Inc.",
+  HLT: "Hilton Worldwide Holdings Inc.",
+  DAL: "Delta Air Lines Inc.",
+  LUV: "Southwest Airlines Company",
+  CCL: "Carnival Corporation & plc",
+  RCL: "Royal Caribbean Cruises Ltd.",
+  NKE: "Nike Inc.",
+  TJX: "The TJX Companies, Inc.",
+  LULU: "lululemon athletica inc.",
+  VFC: "V.F. Corporation",
+  TPR: "Tapestry, Inc.",
+  RL: "Ralph Lauren Corporation",
+  PVH: "PVH Corp.",
+  HBI: "Hanesbrands Inc.",
+};
+
 /**
  *
  * @param interests
@@ -26,12 +69,14 @@ export async function getStocks(interests: InterestsEnum[], budget: number) {
     string,
     {
       symbol: string;
+      name: string;
       stockPrice: number;
       /**
        * amount of bought stocks
        * can be fractional
        */
       amount: number;
+      dolarAmount: number;
     }
   > = {};
 
@@ -50,8 +95,11 @@ export async function getStocks(interests: InterestsEnum[], budget: number) {
   for (const stock of selectedStocks) {
     stocks[stock] = {
       symbol: stock,
+      name: stockData[stock],
       stockPrice: prices[stock],
       amount: budget / selectedStocks.length / prices[stock],
+      dolarAmount:
+        prices[stock] * (budget / selectedStocks.length / prices[stock]),
     };
   }
 

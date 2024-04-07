@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function LandingPage() {
   const [statistics, setStatistics] = useState({
     usersCount: 4,
-    stocksCount: 49,
+    stocksCount: 40,
   });
 
   // annimations
