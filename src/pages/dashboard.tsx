@@ -2,12 +2,11 @@ import Layout from "@/components/Layout/Layout";
 import AreaGraph from "@/components/graf/areaGraph";
 import Container from "@/components/ui/container";
 import { parseAmount } from "@/lib";
+import LogicStocks from "@/pages/logic";
 import { useInvestmentState } from "@/state/investmentState";
 import { usePreferencesState } from "@/state/preferencesState";
 import dayjs from "dayjs";
 import { useEffect, useRef, useState } from "react";
-import AreaGraph from "@/components/graf/areaGraph";
-import LogicStocks from "@/pages/logic";
 
 type PropsType = {};
 
@@ -100,8 +99,10 @@ export default function DashboardPage({}: PropsType) {
                 </div>
               );
             })}
+          </div>
+
           <div className="col-span-3 p-4 rounded-lg border bg-foreground/5">
-            <LogicStocks/>
+            <LogicStocks />
           </div>
         </section>
       </Container>
