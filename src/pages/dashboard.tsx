@@ -19,11 +19,11 @@ import { useEffect, useRef, useState } from "react";
 
 type PropsType = {};
 
-export default function DashboardPage({}: PropsType) {
+export default function DashboardPage({ }: PropsType) {
   const { budget, interests, name, riskTolerance, years } =
     usePreferencesState();
 
-  const { totalStockAmount, stocks, events } = useInvestmentState();
+  const { totalStockAmount, stocks, events, action } = useInvestmentState();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -105,7 +105,7 @@ export default function DashboardPage({}: PropsType) {
                       <div className=" text-gray-400">
                         {dayjs().add(day, "days").format("DD.MM.YYYY")}
                       </div>
-                      <EventModal />
+                      <EventModal stock={symbol} description={message} date={dayjs().add(day, "days").format("DD.MM.YYYY")} action={action}/>
                     </CardFooter>
                   </Card>
                 ))}
