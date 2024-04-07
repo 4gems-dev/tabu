@@ -1,5 +1,25 @@
 import { getStocks } from "@/lib/static/stockNames";
+import scenFashion from "@/scenarious/scenFashion.json";
+import scenHealth from "@/scenarious/scenHealth.json";
+import scenSus from "@/scenarious/scenSus.json";
+import scenTech from "@/scenarious/scenTech.json";
+import scenTravel from "@/scenarious/scenTravel.json";
+import { InterestsEnum } from "@/types";
 import { create } from "zustand";
+import { usePreferencesState } from "./preferencesState";
+// import scenFashion from "@/scenarious/scenFashion.json"
+// import scenHealth from "@/scenarious/scenHealth.json"
+// import scenSus from "@/scenarious/scenSus.json"
+// import scenTech from "@/scenarious/scenTech.json"
+// import scenTravel from "@/scenarious/scenTravel.json"
+
+const scenarios: Record<InterestsEnum, typeof scenTravel> = {
+  FASHION: scenFashion,
+  HEALTH: scenHealth,
+  SUSTAINABILITY: scenSus,
+  TECH: scenTech,
+  TRAVEL: scenTravel,
+} as const;
 
 export type InvestmentStateType = {
   isSimulationRunning: boolean;
@@ -10,6 +30,13 @@ export type InvestmentStateType = {
    * days from beginning of the investment
    */
   // days: number;
+
+  events: {
+    message: string;
+    change: number;
+    stock: { symbol: string; name: string };
+    day: number;
+  }[];
 
   /**
    * amount of euros on account with history
@@ -49,6 +76,7 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
   fiatAmount: [],
   totalStockAmount: [],
   stocks: {},
+  events: [],
 
   pauseSimulation: () => {
     set({ isSimulationRunning: false });
@@ -120,6 +148,46 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
 
       newStocks[symbol] = data;
       newTotalStockAmount += newPrice * currData.amount;
+    }
+
+    // const todaysScenarios = [];
+
+    for (const interest of usePreferencesState.getState().interests) {
+      const intScenarios = scenarios[interest];
+
+      for (const {
+        Day,
+        Impact,
+        Message,
+        Percentage,
+        stockId,
+        stockName,
+      } of intScenarios) {
+        if (totalStockAmount.length !== Day || !(stockId in newStocks)) {
+          continue;
+        }
+
+        const current = newStocks[stockId][newStocks[stockId].length - 1];
+        newStocks[stockId].push({
+          ...current,
+          price: current.price + current.price * (Percentage / 100),
+        });
+
+        set({
+          events: [
+            ...get().events,
+            {
+              change: Percentage,
+              message: Message,
+              day: totalStockAmount.length,
+              stock: {
+                name: stockName,
+                symbol: stockId,
+              },
+            },
+          ],
+        });
+      }
     }
 
     set({

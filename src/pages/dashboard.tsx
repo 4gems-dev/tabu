@@ -1,10 +1,14 @@
 import Layout from "@/components/Layout/Layout";
 import AreaGraph from "@/components/graf/areaGraph";
 import { EventModal } from "@/components/modal/EventModal";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Container from "@/components/ui/container";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { parseAmount } from "@/lib";
 import LogicStocks from "@/pages/logic";
@@ -15,11 +19,11 @@ import { useEffect, useRef, useState } from "react";
 
 type PropsType = {};
 
-export default function DashboardPage({ }: PropsType) {
+export default function DashboardPage({}: PropsType) {
   const { budget, interests, name, riskTolerance, years } =
     usePreferencesState();
 
-  const { totalStockAmount, stocks } = useInvestmentState();
+  const { totalStockAmount, stocks, events } = useInvestmentState();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -31,13 +35,11 @@ export default function DashboardPage({ }: PropsType) {
 
   const chartRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     const getElementDimensions = () => {
       if (chartRef.current) {
         setWidth(chartRef.current.offsetWidth);
-        setHeight(chartRef.current.offsetHeight);
       }
     };
 
@@ -78,32 +80,34 @@ export default function DashboardPage({ }: PropsType) {
             />
           </div>
 
-          <div className={"row-span-2 p-4 rounded-lg border bg-foreground/5 overflow-y-auto h-[800px]"}>
+          <div
+            className={
+              "row-span-2 p-4 rounded-lg border bg-foreground/5 overflow-y-auto h-[800px]"
+            }
+          >
             <ScrollArea className={"rounded-md border p-2 h-[99%]"}>
-              <Card className=" w-full h-full my-4 bg-foreground/15 ">
-                <CardHeader>
-                  <CardTitle>Stock AAPL</CardTitle>
-                  <CardDescription>Q2 earning are expected to rise at least 20%</CardDescription>
-                </CardHeader>
-                <CardFooter className="flex justify-between">
-                  <div className=" text-gray-400">
-                    22.06.2021
-                  </div>
-                  <EventModal />
-                </CardFooter>
-              </Card>
-              <Card className=" w-full h-full my-4 bg-foreground/15 ">
-                <CardHeader>
-                  <CardTitle>Stock MSFT</CardTitle>
-                  <CardDescription>Q2 earning are expected to fall at least 20%</CardDescription>
-                </CardHeader>
-                <CardFooter className="flex justify-between">
-                  <div className=" text-gray-400">
-                    22.06.2021
-                  </div>
-                  <EventModal />
-                </CardFooter>
-              </Card>
+              {events
+                .reverse()
+                .map(({ message, day, stock: { name, symbol } }, i) => (
+                  <Card
+                    key={i}
+                    className=" w-full h-full my-4 bg-foreground/15 "
+                  >
+                    <CardHeader>
+                      <CardTitle>
+                        <span className="font-bold">{name}</span>{" "}
+                        <span className="text-muted-foreground">{symbol}</span>
+                      </CardTitle>
+                      <CardDescription>{message}</CardDescription>
+                    </CardHeader>
+                    <CardFooter className="flex justify-between">
+                      <div className=" text-gray-400">
+                        {dayjs().add(day, "days").format("DD.MM.YYYY")}
+                      </div>
+                      <EventModal />
+                    </CardFooter>
+                  </Card>
+                ))}
             </ScrollArea>
           </div>
 
@@ -150,6 +154,6 @@ export default function DashboardPage({ }: PropsType) {
           </div>
         </section>
       </Container>
-    </Layout >
+    </Layout>
   );
 }

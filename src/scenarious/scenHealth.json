@@ -223,38 +223,36 @@
     "Percentage": -3,
     "Day": 297
   },
-  [
-    {
-      "stockName": "Eli Lilly",
-      "stockId": "LLY",
-      "Impact": "positive",
-      "Message": "Successful late-stage clinical trial results for a new Alzheimer's disease treatment",
-      "Percentage": 15,
-      "Day": 128
-    },
-    {
-      "stockName": "Eli Lilly",
-      "stockId": "LLY",
-      "Impact": "positive",
-      "Message": "Strong sales growth for existing diabetes medications exceeds analyst expectations",
-      "Percentage": 10,
-      "Day": 294
-    },
-    {
-      "stockName": "Eli Lilly",
-      "stockId": "LLY",
-      "Impact": "negative",
-      "Message": "Halt in clinical trials for a promising new cancer drug due to safety concerns",
-      "Percentage": -8,
-      "Day": 331
-    },
-    {
-      "stockName": "Eli Lilly",
-      "stockId": "LLY",
-      "Impact": "negative",
-      "Message": "Lawsuit filed by competitor alleging patent infringement on a key drug",
-      "Percentage": -6,
-      "Day": 61
-    }
-  ]
+  {
+    "stockName": "Eli Lilly",
+    "stockId": "LLY",
+    "Impact": "positive",
+    "Message": "Successful late-stage clinical trial results for a new Alzheimer's disease treatment",
+    "Percentage": 15,
+    "Day": 128
+  },
+  {
+    "stockName": "Eli Lilly",
+    "stockId": "LLY",
+    "Impact": "positive",
+    "Message": "Strong sales growth for existing diabetes medications exceeds analyst expectations",
+    "Percentage": 10,
+    "Day": 294
+  },
+  {
+    "stockName": "Eli Lilly",
+    "stockId": "LLY",
+    "Impact": "negative",
+    "Message": "Halt in clinical trials for a promising new cancer drug due to safety concerns",
+    "Percentage": -8,
+    "Day": 331
+  },
+  {
+    "stockName": "Eli Lilly",
+    "stockId": "LLY",
+    "Impact": "negative",
+    "Message": "Lawsuit filed by competitor alleging patent infringement on a key drug",
+    "Percentage": -6,
+    "Day": 61
+  }
 ]
