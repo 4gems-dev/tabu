@@ -1,0 +1,165 @@
+{
+    "success": true,
+    "data": [
+        {
+            "symbol": "AAPL",
+            "name": "APPLE INC"
+        },
+        {
+            "symbol": "MSFT",
+            "name": "MICROSOFT CORP"
+        },
+        {
+            "symbol": "NVDA",
+            "name": "NVIDIA CORP"
+        },
+        {
+            "symbol": "GOOGL",
+            "name": "ALPHABET INC-CL A"
+        },
+        {
+            "symbol": "AMZN",
+            "name": "AMAZON.COM INC"
+        },
+        {
+            "symbol": "CRM",
+            "name": "SALESFORCE INC"
+        },
+        {
+            "symbol": "ADBE",
+            "name": "ADOBE INC"
+        },
+        {
+            "symbol": "CSCO",
+            "name": "CISCO SYSTEMS INC"
+        },
+        {
+            "symbol": "JNJ",
+            "name": "JOHNSON & JOHNSON"
+        },
+        {
+            "symbol": "UNH",
+            "name": "UNITEDHEALTH GROUP INC"
+        },
+        {
+            "symbol": "PFE",
+            "name": "PFIZER INC"
+        },
+        {
+            "symbol": "ABT",
+            "name": "ABBOTT LABORATORIES"
+        },
+        {
+            "symbol": "MDT",
+            "name": "MEDTRONIC PLC"
+        },
+        {
+            "symbol": "TMO",
+            "name": "THERMO FISHER SCIENTIFIC INC"
+        },
+        {
+            "symbol": "PG",
+            "name": "PROCTER & GAMBLE CO/THE"
+        },
+        {
+            "symbol": "LLY",
+            "name": "ELI LILLY & CO"
+        },
+        {
+            "symbol": "NEE",
+            "name": "NEXTERA ENERGY INC"
+        },
+        {
+            "symbol": "BEP",
+            "name": "BROOKFIELD RENEWABLE PARTNER"
+        },
+        {
+            "symbol": "AWK",
+            "name": "FUXING CHINA GROUP LTD"
+        },
+        {
+            "symbol": "PLD",
+            "name": "PROLOGIS INC"
+        },
+        {
+            "symbol": "EQIX",
+            "name": "EQUINIX INC"
+        },
+        {
+            "symbol": "DLR",
+            "name": "DIGITAL REALTY TRUST INC"
+        },
+        {
+            "symbol": "WM",
+            "name": "WALLBRIDGE MINING CO LTD"
+        },
+        {
+            "symbol": "FSLR",
+            "name": "FIRST SOLAR INC"
+        },
+        {
+            "symbol": "BKNG",
+            "name": "BOOKING HOLDINGS INC"
+        },
+        {
+            "symbol": "EXPE",
+            "name": "EXPEDIA GROUP INC"
+        },
+        {
+            "symbol": "MAR",
+            "name": "MARRIOTT INTERNATIONAL -CL A"
+        },
+        {
+            "symbol": "HLT",
+            "name": "HILTON WORLDWIDE HOLDINGS IN"
+        },
+        {
+            "symbol": "DAL",
+            "name": "DATALOGIC SPA"
+        },
+        {
+            "symbol": "LUV",
+            "name": "SOUTHWEST AIRLINES CO"
+        },
+        {
+            "symbol": "CCL",
+            "name": "CARNIVAL PLC"
+        },
+        {
+            "symbol": "RCL",
+            "name": "READCLOUD LTD"
+        },
+        {
+            "symbol": "NKE",
+            "name": "NIKE INC -CL B"
+        },
+        {
+            "symbol": "TJX",
+            "name": "TJX COMPANIES INC"
+        },
+        {
+            "symbol": "LULU",
+            "name": "LULULEMON ATHLETICA INC"
+        },
+        {
+            "symbol": "VFC",
+            "name": "VF CORP"
+        },
+        {
+            "symbol": "TPR",
+            "name": "TAPESTRY INC"
+        },
+        {
+            "symbol": "RL",
+            "name": "RALPH LAUREN CORP"
+        },
+        {
+            "symbol": "PVH",
+            "name": "PVH CORP"
+        },
+        {
+            "symbol": "HBI",
+            "name": "HANESBRANDS INC"
+        }
+    ]
+}
