@@ -22,7 +22,7 @@ export const usePreferencesState = create<PreferencesStateType>((set, get) => ({
   // TODO: remove
   interests: ["HEALTH", "SUSTAINABILITY", "TECH"],
   riskTolerance: "LOW",
-  budget: null,
+  budget: 900,
   years: "UNCERTAIN",
   setValue: (key, value) => {
     set({ [key]: value });

@@ -6,6 +6,8 @@ import { useInvestmentState } from "@/state/investmentState";
 import { usePreferencesState } from "@/state/preferencesState";
 import dayjs from "dayjs";
 import { useEffect, useRef, useState } from "react";
+import AreaGraph from "@/components/graf/areaGraph";
+import LogicStocks from "@/pages/logic";
 
 type PropsType = {};
 
@@ -98,6 +100,8 @@ export default function DashboardPage({}: PropsType) {
                 </div>
               );
             })}
+          <div className="col-span-3 p-4 rounded-lg border bg-foreground/5">
+            <LogicStocks/>
           </div>
         </section>
       </Container>

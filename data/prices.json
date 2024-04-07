@@ -1,0 +1,165 @@
+{
+    "success": true,
+    "data": [
+        {
+            "symbol": "AAPL",
+            "currentPrice": 169.58
+        },
+        {
+            "symbol": "MSFT",
+            "currentPrice": 425.52
+        },
+        {
+            "symbol": "NVDA",
+            "currentPrice": 880.08
+        },
+        {
+            "symbol": "GOOGL",
+            "currentPrice": 152.5
+        },
+        {
+            "symbol": "AMZN",
+            "currentPrice": 185.07
+        },
+        {
+            "symbol": "CRM",
+            "currentPrice": 301.91
+        },
+        {
+            "symbol": "ADBE",
+            "currentPrice": 485.12
+        },
+        {
+            "symbol": "CSCO",
+            "currentPrice": 48.55
+        },
+        {
+            "symbol": "JNJ",
+            "currentPrice": 152.39
+        },
+        {
+            "symbol": "UNH",
+            "currentPrice": 455.74
+        },
+        {
+            "symbol": "PFE",
+            "currentPrice": 26.66
+        },
+        {
+            "symbol": "ABT",
+            "currentPrice": 111.2
+        },
+        {
+            "symbol": "MDT",
+            "currentPrice": 84.56
+        },
+        {
+            "symbol": "TMO",
+            "currentPrice": 579.46
+        },
+        {
+            "symbol": "PG",
+            "currentPrice": 156.1
+        },
+        {
+            "symbol": "LLY",
+            "currentPrice": 784.21
+        },
+        {
+            "symbol": "NEE",
+            "currentPrice": 64.18
+        },
+        {
+            "symbol": "BEP",
+            "currentPrice": 22.39
+        },
+        {
+            "symbol": "AWK",
+            "currentPrice": 118.52
+        },
+        {
+            "symbol": "PLD",
+            "currentPrice": 124.74
+        },
+        {
+            "symbol": "EQIX",
+            "currentPrice": 784.41
+        },
+        {
+            "symbol": "DLR",
+            "currentPrice": 142.6
+        },
+        {
+            "symbol": "WM",
+            "currentPrice": 206.93
+        },
+        {
+            "symbol": "FSLR",
+            "currentPrice": 174.6
+        },
+        {
+            "symbol": "BKNG",
+            "currentPrice": 3601.9
+        },
+        {
+            "symbol": "EXPE",
+            "currentPrice": 131.79
+        },
+        {
+            "symbol": "MAR",
+            "currentPrice": 253.93
+        },
+        {
+            "symbol": "HLT",
+            "currentPrice": 211.69
+        },
+        {
+            "symbol": "DAL",
+            "currentPrice": 46.06
+        },
+        {
+            "symbol": "LUV",
+            "currentPrice": 28.34
+        },
+        {
+            "symbol": "CCL",
+            "currentPrice": 15.12
+        },
+        {
+            "symbol": "RCL",
+            "currentPrice": 136.02
+        },
+        {
+            "symbol": "NKE",
+            "currentPrice": 88.84
+        },
+        {
+            "symbol": "TJX",
+            "currentPrice": 96.81
+        },
+        {
+            "symbol": "LULU",
+            "currentPrice": 356.87
+        },
+        {
+            "symbol": "VFC",
+            "currentPrice": 13.76
+        },
+        {
+            "symbol": "TPR",
+            "currentPrice": 42.93
+        },
+        {
+            "symbol": "RL",
+            "currentPrice": 171.95
+        },
+        {
+            "symbol": "PVH",
+            "currentPrice": 108.66
+        },
+        {
+            "symbol": "HBI",
+            "currentPrice": 5.13
+        }
+    ]
+}

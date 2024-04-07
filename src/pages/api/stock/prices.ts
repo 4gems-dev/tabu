@@ -8,6 +8,7 @@ import {
 import { stockNames } from "@/lib/static/stockNames";
 import { InterestsEnumArray, SuccessType } from "@/types";
 import { ApiEndpointType } from "@/types/api";
+import prices from '../../../../data/prices.json';
 
 export interface StockData {
   symbol: string;
@@ -44,7 +45,8 @@ async function GET(
   req: ApiStockPricesGET["request"],
   res: NextApiResponse<ApiStockPricesGET["response"]>
 ) {
-  const symbols = InterestsEnumArray.flatMap((interest) =>
+  return res.status(200).json({ success: true, data: prices.data });
+  /*const symbols = InterestsEnumArray.flatMap((interest) =>
     stockNames(interest)
   );
   const token = "co8l9qhr01qjn9a1tfbgco8l9qhr01qjn9a1tfc0";
@@ -79,5 +81,5 @@ async function GET(
     };
   });
 
-  return res.status(200).json({ success: true, data: toReturn });
+  return res.status(200).json({ success: true, data: toReturn });*/
 }

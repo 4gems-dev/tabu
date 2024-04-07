@@ -4,6 +4,7 @@ import { cacheProvider, cacheProviderGet, cacheProviderHas } from '@/lib/cache/c
 import { stockNames } from '@/lib/static/stockNames';
 import { InterestsEnumArray, SuccessType } from '@/types';
 import { ApiEndpointType } from "@/types/api";
+import names from '../../../../data/names.json';
 
 interface StockData {
     symbol: string;
@@ -35,7 +36,8 @@ async function GET(
     req: ApiStockNamesGET["request"],
     res: NextApiResponse<ApiStockNamesGET["response"]>
 ) {
-    const symbols = InterestsEnumArray.flatMap(interest => stockNames(interest));
+    return res.status(200).json({ success: true, data: names.data });
+    /*const symbols = InterestsEnumArray.flatMap(interest => stockNames(interest));
     const token = 'co8l9qhr01qjn9a1tfbgco8l9qhr01qjn9a1tfc0';
     let dataArray: [string, any][] = [];
     const filteredSymbols = symbols.filter(symbol => !cacheProviderHas(symbol + "-NAMES"))
@@ -70,5 +72,5 @@ async function GET(
         })
     });
 
-    return res.status(200).json({ success: true, data: toReturn });
+    return res.status(200).json({ success: true, data: toReturn });*/
 }
