@@ -19,9 +19,9 @@ export type PreferencesStateType = PreferencesType & {
 
 export const usePreferencesState = create<PreferencesStateType>((set, get) => ({
   name: "",
-  interests: [],
+  interests: ["TECH"],
   riskTolerance: "LOW",
-  budget: null,
+  budget: 900,
   years: "UNCERTAIN",
   setValue: (key, value) => {
     set({ [key]: value });
