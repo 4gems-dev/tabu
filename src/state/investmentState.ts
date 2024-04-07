@@ -104,13 +104,15 @@ export const useInvestmentState = create<InvestmentStateType>((set, get) => ({
       get().init({});
     }
 
-    const overallMovement = Math.random() * (-1 + 4) - 0.5;
+    const drift = 0.001;
+    const volatility = 0.01;
 
     for (const [symbol, [...data]] of Object.entries(stocks)) {
       const currData = data[data.length - 1];
 
-      const newPrice =
-        currData.price * Math.random() * (-1 + 4) - 1 + overallMovement;
+      const change = Math.random() * volatility - volatility / 2;
+
+      const newPrice = currData.price + currData.price * (change + drift);
 
       data.push({
         amount: currData.amount,
